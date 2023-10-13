@@ -1,0 +1,277 @@
+{% extends "layout.html" %}
+  
+
+{% block page_content %}
+<article>
+<div class="cover_img_parts">
+  <h1>Parts</h1>
+</div>
+
+<div class="whiteBlock FirstOfPart">
+  <div class="cntr">
+    <table style="width:100%" class="para">
+      <tr>
+        <th>Part Name</th>
+        <th>Part Number</th>
+        <th>Part Type</th>
+        <th style="width:50%">Part Function</th>
+      </tr>
+      <tr>
+        <td class="pad">BclB</td>
+        <td class="pad"><a href="http://parts.igem.org/Part:BBa_K4428000">BBa_K4428000</a></td>
+        <td class="pad">Basic</td>
+        <td class="pad">Several anchoring motifs have been used for the surface display of proteins in E. coli. However,
+          most of
+          them suffer from the limitation of expressing only small peptides and proteins on the cell surface. To
+          overcome this, heterologous anchoring motifs have been used. One such motif is BclB from B. anthracis.</td>
+      </tr>
+      <tr>
+        <td class="pad">PbrR MBD</td>
+        <td class="pad"><a href="http://parts.igem.org/Part:BBa_K4428001">BBa_K4428001</a></td>
+        <td class="pad">Basic</td>
+        <td class="pad">PbrR was modified by truncating the N-terminal DNA Binding Domain and C-terminal redundant amino
+          acid
+          residues to obtain lead domain maintaining its Pb2+ binding property. The MBD (metal binding domain) being
+          smaller in size leads to increased display and expression than the full-length PbrR-displayed cells.</td>
+      </tr>
+      <tr>
+        <td class="pad">PbrR691</td>
+        <td class="pad"><a href="http://parts.igem.org/Part:BBa_K4428002">BBa_K4428002</a></td>
+        <td class="pad">Basic</td>
+        <td class="pad">A lead-specific binding protein, PbrR, and promoter pbr from the lead resistance operon, pbr, of
+          Cupriavidus metallidurans CH34 have shown highly sensitive and selective whole-cell detection of lead ions. In
+          our project, we are using a recombinant version of PbrR protein, PbrR691, and displaying it on the
+          extracellular membrane of Escherichia coli BL21 cells. PbrR691 displays 1000 times more specificity towards
+          lead as compared to other metal ions.</td>
+      </tr>
+      <tr>
+        <td class="pad">Surface Display of PbrR using BclB</td>
+        <td class="pad"><a href="http://parts.igem.org/Part:BBa_K4428003">BBa_K4428003</a></td>
+        <td class="pad">Composite</td>
+        <td class="pad">The lead-binding protein PbrR can be expressed on the surface of bacteria with the help of the
+          N-terminal domain of an anchor protein BclB for cell-surface adsorption of lead.</td>
+      </tr>
+      <tr>
+        <td class="pad">Surface Display of PbrR-MBD using BclB</td>
+        <td class="pad"><a href="http://parts.igem.org/Part:BBa_K4428004">BBa_K4428004</a></td>
+        <td class="pad">Composite</td>
+        <td class="pad">The lead-binding domain of the protein PbrR can be expressed on the surface of bacteria with the
+          help of the N-terminal domain of an anchor protein BclB for cell-surface adsorption of lead.</td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <h2>PbrR691</h2>
+  <div class="gridWhite">
+    <div class="imageblock">
+      <div class="img_PbrR691"><img src="https://static.igem.wiki/teams/4428/wiki/wet-lab/parts/pbrr691.png" alt=""></div>
+      <p class="subtitle">3-D structure of PbrR691
+        Source::https://www.rcsb.org/3d-sequence/5GPE?assemblyId=1
+      </p>
+    </div>
+    <div class="para">
+      <p>A lead-specific binding protein, PbrR, and promoter pbr from the lead resistance operon, pbr, of Cupriavidus
+        metallidurans CH34 have shown highly sensitive and selective whole-cell detection of lead ions. In our project,
+        we
+        are using a recombinant version of PbrR protein, PbrR69, and displaying it on the extracellular membrane of
+       <i> Escherichia coli </i> BL21 cells.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="blueGreyishBlock">
+  <h2>Background</h2>
+  <div class="para">
+    <p>While PbrR and promoter pbr from the lead resistance operon, pbr, of Cupriavidus metallidurans CH34 have shown
+      highly sensitive and selective whole-cell detection of lead ions (Hobman et al., 2012), a PbrR homolog, PbrR691
+      derived from the C. metallidurans CH34 genome derived 1000 times more specificity towards lead as compared to
+      other metal ions (P. Chen et al., 2007). Being more soluble than PbrR, PbrR691 is a more suitable choice for
+      biosensors (P. Chen et al., 2005), however, its feasibility has not been tested yet for bioremediation
+      applications.
+    </p>
+    <p>
+      In the studies where PbrR has been used for the adsorption of Pb2+ via cell surface display, its adsorption
+      capacity has proved to be limited, indicating the requirement for improved methods. Thus, PbrR691 is used in this
+      project with the aim of achieving enhanced adsorption capacity via cell surface display.
+    </p>
+  </div>
+</div>
+
+<div class="whiteBlock">
+  <h2>Part Uses</h2>
+  <div class="para">
+    <p>Recently extracellular display of proteins has become the method of choice to enhance the adsorption selectivity
+      and the capacity of specific metal ions. This is done by anchoring specific heavy metal-binding proteins on the
+      bacterial surface by fusing it with a naturally occurring cell surface protein (called the anchor protein). This
+      study uses Bclb as the anchor.</p>
+    <p>PbrR691, a homolog of PbrR, is a soluble protein that can be easily expressed on the cell surface. On comparison
+      of the performance of PbrR691 and PbrR, PbrR691 shows an enhanced performance (431.7-μmol/g CDW ) compared to PbrR
+      (388.4-μmol/g CDW). Further, overexpression of PbrR was shown to exert a much higher burden on cell growth in
+      comparison to PbrR691 (Jia et al.,2020).</p>
+  </div>
+</div>
+
+<div class="blueExperimentDataBlock">
+  <div class="img_absorption_capacities">
+    <img src="https://static.igem.wiki/teams/4428/wiki/wet-lab/parts/absoprtion-capacities.png" alt="">
+  </div>
+  <div class="subtitle">
+    <p>Fig: Relative adsorption capacities for different mixed metal concentrations for PbrR, PbrR691, and PbrD (Jia et
+      al., 2020)
+    </p>
+  </div>
+  <div class="para">
+    <p>The high selectivity of PbrR691 has been attributed to the unique semidirectional geometry of the lead
+      coordination center, so that Pb2+ can be preferentially recognized by PbrR691 through chelation effects(Taghvi et
+      al., 2008).</p>
+  </div>
+</div>
+
+<div class="whiteBlock PbrR_MBD">
+  <h2>PbrR MBD</h2>
+  <div class="img_PBrRMBD">
+    <img src="https://static.igem.wiki/teams/4428/wiki/wet-lab/parts/pbrr-mbd.png" alt="">
+  </div>
+  <div class="subtitle">
+    <p> Fig: c A model of PbrR protomer generated using Swiss-Model workspace
+      (https://swissmodel.expasy.org/workspace/). The ribbon diagram shows the Pb2+ binding domain in color and the
+      other parts in gray. Residues Cys79, Cys114, and Cys123 involved in metal binding are presented as a space-filling
+      model. d Ribbon representation of PbBD generated by truncating 49 N-terminal amino acids and 15 C-terminal amino
+      acids of PbrR
+    </p>
+  </div>
+  <div class="para">
+    <p>
+      A lead-specific binding protein, PbrR, and promoter pbr from the lead resistance operon, pbr, of Cupriavidus
+      metallidurans CH34 have shown highly sensitive and selective whole-cell detection of lead ions. In our project, we
+      are using a recombinant version of PbrR protein, PbrR69, and displaying it on the extracellular membrane of
+     <i> Escherichia coli </i> BL21 cells.
+    </p>
+  </div>
+</div>
+
+<div class="blueGreyishBlock">
+  <h2>Background</h2>
+  <div class="para">
+    <p>For the biosorption of lead ions, PbrR has been effectively engineered onto the surface of microorganisms.
+      However, this molecule's lack of specificity makes it challenging to recover a single heavy metal ion
+      selectively.The PbrR coming from the MerR family, were characterized structurally by two distinct domains: an
+      N-terminal DNA-binding domain (DBD) and a C-terminal metal binding domain (MBD) containing a central
+      linker.Studies claimed that the MerR member was made up of the C-terminal conserved MBD and the N-terminal
+      distinct DBD (Chang et al. 2015). It is known that the smaller the molecule the better the cell surface
+      expresssion. Also studies showed that both the domain's function are independent of each other (Song et al. 2004;
+      Tao et al. 2013). This lead to expression of just the Metal binding domain on the cell surface to increase the
+      surface hence increasing the adsorption capacity.
+    </p>
+    <p>
+      Importantly, the Pb2+ adsorption capacity of PbrR MBD-displayed cells was about 1.92-fold higher than that of the
+      full-length PbrR-displayed cells. Also the PbrR MBD shows highly selective adsoprtion towards the lead similar to
+      the full length PbrR(Hui et al. 2018).
+    </p>
+    <p>
+      In the studies where PbrR has been used for the adsorption of Pb2+ via cell surface display, its adsorption
+      capacity has proved to be limited, indicating the requirement for improved methods. Thus, PbrR691 is used in this
+      project with the aim of achieving enhanced adsorption capacity via cell surface display.
+    </p>
+  </div>
+</div>
+
+<div class="whiteBlock">
+  <h2>Part Uses</h2>
+  <div class="para">
+    <p>In contrast to the conventional physical and chemical methods for environmental remediation, microbial
+      cell-surface display has evolved as a unique strategy for bioremediation of heavy metal pollution. An innovative
+      method for the selective bioremediation of harmful heavy metals is the engineering of the particular metal binding
+      domain or motif derived from the MerR family regulators on the microbial cell surface.</p>
+    <p>The PbrR MBD domain due to its smaller size can lead to increased cell surface display causing better adsorption
+      of the metal ion. Using the MBD instead of the full length PbrR for expression on cell surface will prove better
+      for bioremediation of the heavy metal Pb2+ ions.</p>
+  </div>
+</div>
+
+<div class="blueExperimentDataBlock">
+  <div class="img_display">
+    <img src="https://static.igem.wiki/teams/4428/wiki/wet-lab/parts/surface-display.png" alt="">
+  </div>
+  <br>
+  <div class="subtitle">
+    <p>
+      Fig: Surface display of PbrR and PbBD fusions to LOA in <i> E. coli </i> BL21(DE3). a Bright field and corresponding
+      fluorescent micrographs of surface-engineered cells. Immunofluorescence labeling of <i> E. coli </i> cells using anti-His
+      tag antibody (primary antibody) and FITC-labeled donkey anti-mouse antibody (secondary antibody). b
+      Immunofluorescence intensity of full-length PbrR or PbBD-displayed <i> E. coli </i> cells. Data are the mean of three
+      independent measurements
+    </p>
+  </div>
+</div>
+
+<div class="whiteBlock">
+  <h2>BclB Gene</h2>
+  <div class="para">
+    <p>
+      Several anchoring motifs have been used for surface display of proteins on <i> E. coli. </i> However, most of them suffer
+      from the limitation of expressing only small peptides and proteins on the cell surface. To overcome this,
+      heterologous anchoring motifs have been used as anchoring motif. One such motif is BclB from B. anthracis used in
+      our project.
+    </p>
+  </div>
+</div>
+
+<div class="blueGreyishBlock">
+  <h2>Background</h2>
+  <div class="para">
+    <p>
+      BclB is a collagen-like glycoproteins found in outermost layer of the B. anthracis spore called exosporium. This
+      glycoproteins are incorporated into the exosporium by the action of certain sequences near the N-terminal region
+      of the BclB glycoproteins.(Waller et al 2005) BclB was found to play a role in the structural integrity of the
+      exosporium. The influence of BclB on the incorporation of the BclA protein and on the overall architecture of the
+      spore, directly or indirectly, is one of the keys in the formation or maintenance of a rigid and complete
+      exosporium structure in B. anthracis. BclB is a 28 amino acid sequence, which contains a repeated GXX motif,
+      GITGVTGAT called the BclB repeat, which is thought to be responsible for it's rigid binding to the cell surface.
+      (B.M.Thompson et al 2007)
+    </p>
+  </div>
+</div>
+
+<div class="whiteBlock">
+  <h2>Part Uses</h2>
+  <div class="para">
+    <p>BclB as an anchoring motif has been previously used by Srivastava et al 2018, for the surface display of
+      Dibenzothiophene monooxygenase on the recombinant <i> E.coli.</i> </p>
+    <p>In this project, the N terminus of BclB was used as an anchoring motif to hold the PbrR protein on the surface of
+      the engineered bacteria, so that the PbrR can bind specifically to Lead ions and hence can be used for lead
+      removal.</p>
+    <p>
+      In this project we had directly used the pSR2 plasmid containing the BclB gene, as the plasmid to clone PbrR gene
+      for lead recovery. This plasmid was kindly given to us by the RNA 1 Laboratory of Professor Preeti Srivastava, the
+      principal investigator of our project.
+    </p>
+  </div>
+</div>
+
+<div class="blueExperimentDataBlock">
+  <h2>References</h2>
+  <div class="para">
+    <ol>
+      <li>Jia X, Li Y, Xu T, Wu K. Display of lead-binding proteins on <i>Escherichia coli</i> surface for lead bioremediation.
+        Biotechnol Bioeng. 2020 Dec;117(12):3820-3834. doi: 10.1002/bit.27525. Epub 2020 Sep 18. PMID: 32740905.</li>
+      <li>Hui, CY., Guo, Y., Yang, XQ. et al. Surface display of metal binding domain derived from PbrR on <i> Escherichia
+        coli </i> specifically increases lead(II) adsorption. Biotechnol Lett 40, 837-845 (2018).
+        https://doi.org/10.1007/s10529-018-2533-4 </li>
+      <li>Waller LN, Stump MJ, Fox KF, Harley WM, Fox A, Stewart GC, Shahgholi M. Identification of a second
+        collagen-like glycoprotein produced by Bacillus anthracis and demonstration of associated spore-specific sugars.
+        J Bacteriol. 2005 Jul;187(13):4592-7. </li>
+      <li>Thompson BM, Waller LN, Fox KF, Fox A, Stewart GC. The BclB glycoprotein of Bacillus anthracis is involved in
+        exosporium integrity. J Bacteriol. 2007 Sep;189(18):6704-13. </li>
+      <li>
+        Rangra, S., Kabra, M., Gupta, V., & Srivastava, P. (2018). Improved conversion of Dibenzothiophene into sulfone
+        by surface display of Dibenzothiophene monooxygenase (DszC) in recombinant <i> Escherichia coli. </i> Journal of
+        Biotechnology.
+      </li>
+    </ol>
+  </div>
+</div>
+</article>
+
+{% endblock %}

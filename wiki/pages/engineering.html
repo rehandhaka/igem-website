@@ -1,0 +1,98 @@
+{% extends "layout.html" %} {% block page_content %}
+<article>
+<div class="section-blue">
+    <h1>Engineering</h1>
+</div>
+<div class="engineering description">
+    <!-- <h2>Lead Absortion Cycle</h2>
+    <br> -->
+    <h3>Design</h3>
+    <p>
+        As we identified the need to address lead contamination in aqueous media, we devised a synthetic biology solution to it. We began by narrowing down to the crux of the problem by analysing exactly where current methods of recovery, implemented by lead-based
+        industries to treat their wastewater, lack. We studied the current strategies for lead removal, recovery and recycling. While current physicochemical methods were extremely useful at high lead concentrations, they were uneconomical and inefficient
+        at lower concentrations commonly found in industrially treated wastewater. These methods can bring down the lead concentration of industrial wastewater from 200-500 mg/L to 0.4 mg/L. However, even these lower concentrations of lead are extremely
+        harmful to life forms.
+    </p>
+    <br>
+    <p>
+        Biosorbants which not only remove lead from water but also allow for successive desorption for the recovery of metal were an ideal solution to our problem. Not only does this solution limit exposure to the heavy metal by removal from aqueous media, it
+        also provides the opportunity for value generation for our stakeholders i.e wastewater treatment plants which can redirect the recovered lead to industries. We began reviewing the literature for strategies to implement the cell-surface display
+        of desired proteins. We studied the benefits and limitations of multiple anchor proteins that help express desired proteins on the outer membrane of the cell. Finally, we identified an anchor, BclB, suitable for our system.
+    </p>
+    <br>
+    <p>
+        Additionally, we began searching for lead-binding proteins which can potentially be expressed on the cell surface to recover the lead. We identified a popular metalloregulatory protein found in C. metallidurans proteins, PbrR, as a candidate for our system.
+        We primarily wanted to address the need for high display efficiency on the cell surface, high binding affinity to lead and specificity for recovery. For improving the display efficiency and to reduce metabolic burden on the cell, we decided to
+        use only the metal binding domain (MBD) of PbrR as the cell surface protein. Since this was a much smaller region of the protein, it was hypothesised to be expressed more efficiently without metabolically burdening the cell. Additionally, in the
+        limited surface area of the cell membrane, a smaller protein was hypothesised to improve the display efficiency i.e the number of protein molecules displayed on the cell surface would increase providing an opportunity for higher lead adsorption.
+        Further, we identified another lead-binding protein called PbrR691. This is a recombinant version of PbrR known to be 1000 times more specific to Pb than to other heavy metals. We also decided to further use the metal binding domain of PbrR691
+        which shall improve display efficiency as well as specificity. Thus, we identified these four proteins - PbrR, PbrR MBD, PbrR691 and PbrR691 MBD - for a comparative study to develop a successful lead recovery system.
+    </p>
+    <br>
+    <h3>In silico analysis</h3>
+    <p>
+        Before beginning our wet lab, we structurally modelled all of the shortlisted proteins in our dry lab to find the best protein, its metal binding region, and the lead-protein complex stability. We first generated the protein structures using their amino
+        acid sequences and also used confirmed structures found in the literature. We simulated these in an environment of water to closely represent our media and test the binding of lead with the protein in the environment we intend to use it. We confirmed
+        the fact that all these proteins fold correctly in the system. We ensured that the metal binding domain also folds correctly by itself in the absence of the rest of the protein. We further dock these proteins with lead to test their binding efficiency
+        and also if the binding is reversible for our purposes of desorbing the metal from the surface protein for further use. The detailed results of our in silico analysis can be found in the <a href="{{ url_for('pages', page='model') }}" style="text-decoration: none;">Modelling section</a>.
+    </p>
+    <br>
+    <h2>Build</h2>
+    <p>
+        We cloned all of our shortlisted proteins in our designed recovery plasmid. The plasmid has a pSR2 vector backbone with BclB upstream to the cloning sites of the lead-binding proteins. For cloning of the genes of Interest, we prepared inserts by digesting
+        the PCR amplified genes with restriction enzymes SacI and HindIII. For the vector, we digested the recovery plasmid, which already consists of our anchor, with the same enzymes. Once the vector and inserts were ready, we ligated them and transformed
+        the recombinant pSR2 into <i> E.coli </i> DH5α. We then performed the clone confirmation through colony PCR and double digestion. The results reflected that we were successfully able to clone PbrR and its MBD into the vector. Hence, we moved forward with
+        testing of the two clones while we continued to attempt the cloning of PbrR691 as well.
+    </p>
+    <br>
+    <h2>Test</h2>
+    <p>
+        We thus commenced the testing phase of our project. We transformed our confirmed clones in the <i> E. coli </i> strain pLysS meant for protein expression. We tested our parameter for degree of cell surface display efficiency using SDS-PAGE. We induced the expression
+        of the surface proteins and then performed electrophoresis to test whether the protein was successfully being expressed. The intensity of the bands was also used to deduce the degree of expression.
+
+    </p>
+    <br>
+    <p>
+        To test the efficiency of lead adsorption, we have specifically designed experiments to measure lead concentrations when lead is put in a culture medium with <i> E. coli. </i> We used ICP-MS (inductively coupled plasma-mass-spectrometry) to measure the exact concentrations
+        of the element down to parts per billion. We grew <i> E. coli </i> until a defined concentration of cells and introduced a known concentration of lead to it. We then collected samples at multiple time points, filtered the bacterial cells by centrifugation,
+        and then measured the lead concentration in the supernatant. We tested multiple variables in the experiment by changing either the <i> E. coli </i> concentration, the initial lead concentration and having different durations of lead exposure. The details
+        and results of this testing process can be found <a href="{{ url_for('pages', page='results') }}">here</a>.
+
+    </p>
+    <br>
+    <h2>Learn</h2>
+    <p>
+        The SDS-PAGE results of our engineered cells confirm the expression of the cell-surface protein PbrR. The gel for PbrR MBD doesn’t explicitly show overexpression of the domain, although we attribute it to the extremely small size of the protein as the cells containing the metal binding domain show the ability to adsorb lead in subsequent experiments. The protein expression analysis needs to be optimised for PbrR MBD to accurately detect its expression. 
+    </p>
+    <br>
+    <p>
+        Our engineered bacteria were then tested on artificially Pb-contaminated deionised water demonstrating extremely promising adsorption of lead. We begin with a concentration of 400ppb of lead in the samples. This concentration is equivalent to 0.4mg/l,
+        the threshold concentration at which industrial recovery methods become ineffective. The treated samples, measured for lead concentration using ICP-MS, are left with almost a 40-fold reduction of the lead concentration.
+
+    </p>
+    <br>
+    <p>
+        While an in-depth analysis of the results can be found on the <a href="{{ url_for('pages', page='results') }}">Results</a> page, we do learn that the bacterial cells are successfully able to remove lead from the environment. Interestingly, even the uninduced cells were able to remove lead from
+        the environment which led us to look into the leaky expression of the protein. Thus, we dove back into the literature to see whether the same strain leads to leaky expression of the surface display protein downstream to the BclB anchor under the
+        T7 promoter. Indeed, S. Rangra et al. study using the same strain and construct with a different surface display protein also noted leaky expression even in the uninduced state. This helped deduce that at this concentration, even low expression
+        of the protein is successfully able to treat the samples. Thus, the cells could potentially show much greater adsorptive capacity at higher concentrations. This, however, raises the concern about the ability of <i> E. coli </i> to sustain higher lead concentrations.
+        For the system to be viably used at even higher concentrations of lead, this must be investigated. We also observe that a longer duration of induction of the surface protein led to poorer removal of lead from the sample. Cell death could be attributed
+        to this result due to cells entering their stationary phase rather than staying in the exponential growth phase, leading to poorer adsorption of lead. We also learn that the metal binding domain of PbrR works almost as well as PbrR in terms of
+        removing lead from the sample.
+    </p>
+    <br>
+    <h2>Design</h2>
+    <p>
+        We have found that our engineered bacteria work well at concentrations of lead around 400 ppb. We also learnt that the adsorptive capacity of the engineered cells could potentially be much higher than that observed at these concentrations. These preliminary
+        learnings suggest that we must study the adsorptive capacity of our cells with varying lead concentrations. Simultaneously, the ability of <i> E. coli </i> to sustain higher lead concentrations needs to be tested to characterise if this recovery system
+        would be viable at these higher concentrations of lead. We would also need to investigate if this ability of cell-surface adsorption of lead allows <i> E. coli </i> to sustain higher lead concentrations than the wild type. Additionally, we are yet to test
+        multiple other parameters like varying the concentration of engineered cells to treat the samples, varying the duration of induction of the cells, varying the duration of exposure to lead to identify how long this procedure of adsorption takes
+        and to verify if long durations of exposure to the heavy metal can be toxic to the bacteria and if we can combat it. We hoped to study the role of each of these parameters to comprehend our results better and to recognise the potential of this
+        system, but could not execute these experiments in the limited time frame. We hope to execute the analysis of these parameters in our next design cycle. Additionally, we have observed these results in artificially contaminated water, however,
+        in reality, wastewater samples would have various other interfering impurities. We need to understand how those impurities, especially other heavy metals, affect our system’s capacity to adsorb lead. Also, to shed light on our objective to find
+        the most efficient lead-binding protein for this recovery system, we need to observe how the two constructs fare when varying the pre-stated parameters to conclusively identify the best candidate.
+    </p>
+</div>
+
+</article>
+{% endblock %}

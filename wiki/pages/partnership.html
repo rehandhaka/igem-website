@@ -1,0 +1,65 @@
+{% extends "layout.html" %} {% block page_content %}
+<article>
+<div class="section-blue cover_img_partnership">
+    <h1>Partnership</h1>
+</div>
+
+<div class="description">
+    <p>
+        IIT Delhi partnered with IISc Bangalore for iGEM 2022. We met the IISc team during one of the All India iGEM meetings at the very beginning. After the meeting, we contacted them for guidance and mentorship, as IIT Delhi is participating in iGEM after
+        a gap of three years due to the pandemic. We did not have any direct mentors or iGEM alumni to guide us our efforts. Their team has been a great mentor and friend since. They gave us practical advice on team structure, vertical division and work
+        allocation. Incorporating their advice, we defined four major verticals – Wet Lab, Dry Lab, Human Practices and Marketing, and allocated dedicated leads for each vertical. This made the overall structure well-defined and work more efficient, which
+        was crucial at the beginning of our project.
+
+    </p>
+    <br>
+    <p>
+        While we interacted with multiple other teams like VIT Vellore and REC Chennai as well during the course of our iGEM journey and had extremely fruitful relations, we realised that IISc would make a great partner team for us, not just because they had
+        a great amount of experience in synthetic biology and the competition, but also because we shared common ideologies and goals of our projects, both, with respect to dry lab as well as education and communication.
+
+    </p>
+    <br>
+    <p>
+        Both teams worked on Mathematical and Structural Modelling together and helped each other troubleshoot. We began the mathematical modelling by coding the differential equations that govern our biosensor’s genetic circuit and plotting variations in concentrations
+        of the interacting proteins. Initially, no oscillations we observed in our simulations. IIScB advised revisiting two parameters and performing a Fourier Analysis. The two parameters correspond to the cell density and degradation rate of external
+        AHL. Both the parameters were not available in past research papers and citations. Following this, by varying the two parameters, we found their optimal values and were able to troubleshoot the issue. We were successfully able to visualise an
+        in silico model of our biosensor which showed periodic oscillations in AHL as well as sfGFP, the reporter protein. During this troubleshooting process, we also developed a parameter-finding pipeline that IISc Bangalore later used to find missing
+        parameters in their kinetic model of their circuit.
+    </p>
+    <br>
+    <p>
+        Next, we began working on the structural model of lead-protein docking. IISc suggested that metal-protein docking is not widely supported reliably by usual molecular docking software like AutoDock and that we should contact Prof. Sundar to work on Schrodinger.
+        This was a critical suggestion to improve the reliability of our results. All simulations after that were run on Schrodinger. IISc also found the structure for one of the four proteins we modelled. In turn, we collated a list of resources for
+        IISc on protein structure modelling. This includes links to various software like AlphaFold2, UniProt and Itasser. We also shared a fast LZerd protein-protein docking server. IISc used this to model enzyme interactions. We also provided ‘simscale’ tutorials on fluid flow modelling to IISc. This was used to visualise the flow of hydrofluorocarbons through a funnel-shaped pipe.
+
+    </p>
+    <br>
+    <p>
+        Our partnership was unique because we shared goals beyond the technical aspects of our project. Both teams wished to centralise and organise the introduction to the subject of Synthetic Biology to young students right from school. We aspired to reach
+        out to centralised boards of education like NCERT, which primarily set up the curriculum for most government and private schools in India. To reach out to these boards, we first decided to develop materials for synthetic biology ourselves, which
+        high school students would find interesting and appealing to pursue the subject further. We planned on distributing and getting feedback on these materials from students and teachers to assess the impact we could have by introducing this subject
+        right from high school. We thus planned to reach out to educational boards with the results of our materials, the kind of response we received, the impact we generated and the potential that this initiative held for centralised boards of education
+        to expand the horizons of learning for school-going students.
+
+    </p>
+    <br>
+    <p>
+        Under the education initiative, IIScB and IITD worked collaboratively on the module and assessment sheet preparation. Both teams continuously met to discuss feedback from respective team mentors to fine-tune the content. Once the module was prepared,
+        we worked on the overall structure for the workshop, wherein we tried out multiple activities that could be conducted in schools, specifically for 9th and 10th grade students. Following this, both teams held sessions in schools and NGOs, and compiled
+        a report on the same.
+    </p>
+    <br>
+    <p>
+        This collaboration helped IITD understand the shortcomings in our approach, so their assessment sheets and constant feedback helped us build a better structure for the workshop. Results from the sessions helped provide a larger data set to vet the ideas
+        for the project and helped IITD compile a more comprehensive report to present to the NCERT (education body in India). This took us a long way in establishing contact with the body and gaining their positive response on curriculum inclusion. We
+        helped IIScB adapt its content and make it more relevant for the students. Our responses and session feedback have helped IIScB understand the current student characteristics and their level of knowledge in the urban setup. We have also helped
+        promote inclusion by adapting the module into various languages.
+
+    </p>
+    <br>
+    <div class="cntr">
+        <img src="https://static.igem.wiki/teams/4428/wiki/awards/partnership.png">
+        </div>
+</div>
+</article>
+{% endblock %}

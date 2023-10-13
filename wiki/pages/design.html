@@ -1,0 +1,66 @@
+
+{% extends "layout.html" %} {% block page_content %}
+<article>
+<div class="section-blue">
+    <h1>Design</h1>
+</div>
+<div class="description">
+    <h1>Lead Recovery System Design</h1>
+    <br>
+    <p>
+        We express lead-binding proteins on the cell surface of <i> E. coli </i> with the help of BclB anchor protein. The engineered <i> E. coli </i> will then be used for selective adsorption of Pb2+ and bioremediation of lead. We identify the best candidate for the recovery
+        system by performing a comparative study of 4 surface display proteins using the anchoring motif N - terminal domain of BclB. The four proteins and their advantages are as follows: <br>
+        <ol>
+            <li>PbrR, i.e. a lead-binding protein.</li>
+            <li>PbrR's lead binding domain - the smaller protein would lead to better cell surface display and lower metabolic burden</li>
+            <li>PbrR691, a homologue of the PbrR, has almost 1000 times the specificity.</li>
+            <li>Metal binding domain of PbrR691 provides the opportunity to improve specificity, display efficiency and reduce metabolic burden.
+            </li>
+        </ol>
+        <div style="text-align: center;">
+            <img src="https://static.igem.wiki/teams/4428/wiki/design/design1.png" alt="">
+
+        </div>
+        <br>
+    </p>
+    <p>
+        These proteins are cloned in a vector backbone with a pSR2 origin of replication. The backbone already consists of a T7 promoter upstream of the bclB anchor. The gene coding for the lead binding protein in consideration is cloned downstream of the bclB
+        anchor to ensure the surface display of the protein.
+    </p>
+    <div style="text-align: center;">
+        <img src="https://static.igem.wiki/teams/4428/wiki/design/design2.png" alt="">
+    </div>
+    <br>
+    <h1>Biosensor Design</h1>
+    <br>
+    <p>
+        Through the course of this project, we intend to make an oscillating biosensor for the heavy metal, lead. We intend to pull off this feat of making thousands of bacterial colonies fluoresce in sync in response to the concentration of lead by employing
+        an interesting combination of two mechanisms, quorum sensing and gas-mediated communication. Quorum sensing is too slow a mechanism of cellular communication to produce macroscopic synchronised oscillations. However, if the second level of design
+        incorporates faster communication for colony coordination, the slower quorum sensing can be utilised to synchronise small local colonies. Therefore, we will connect thousands of small oscillating colonies, or "biopixels," in a microfluidic array
+        rather than attempting to create a sensor from a single large-colony oscillator. Redox signalling via hydrogen peroxide (H2O2) and the inherent redox sensing mechanisms of <i> E. coli </i> are involved in the coupling between biopixels. The two coupling
+        processes work in concert because the weaker, yet long-range, redox signalling requires coherent synchronisation with the stronger, yet short-range, quorum sensing.
+    </p>
+    <div style="text-align: center;">
+        <img src="https://static.igem.wiki/teams/4428/wiki/design/design3.png" alt="">
+    </div>
+    <br>
+    <p>
+        All the genes of interest in the genet circuit I.e. the luxI (from V. fischeri), aiiA (from B. Thurigensis) and sfGFP genes are placed under the control of three identical copies of the luxI promoter. luxI and aiiA are the quorum-sensing genes which generate
+        synchronized oscillations within a colony via AHL. The ndh gene codes for NDH-2, an enzyme that generates H2O2 vapour, which is an additional activator of the luxI promoter. H2O2 is capable of migrating between colonies and synchronizing them.
+        Each oscillatory burst promotes firing in neighbouring colonies by relieving repression on the lux promoter. This constitutes an additional positive feedback that rapidly synchronizes the population. The length of the oscillatory period is what
+        is linked to the concentration of lead that the bacteria detect rather than the intensity of oscillations.
+
+    </p>
+    <p>
+        With a platform for generating consistent and readily detectable oscillations, we sought to use the circuit to engineer a lead-sensing macroscopic biosensor. We shall rewire the network to include an extra copy of the positive-feedback element, the AHL
+        synthase LuxI, under the control of a native lead-responsive promoter that is repressed in the absence of lead. We clone pbrR under a constitutive promoter pKan so that it is always present in the system and the circuit isn’t leaky. The promoter
+        pPbr initiates transcription only in the presence of lead since in that condition it is free from repression from the PbrR regulatory protein.
+
+    </p>
+    <div style="text-align: center;">
+        <img src="https://static.igem.wiki/teams/4428/wiki/design/design4.png" alt="">
+    </div>
+</div>
+
+</article>
+{% endblock %}

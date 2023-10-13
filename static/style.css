@@ -1,0 +1,1766 @@
+/* body { padding-top: 56px; }
+.left-aligned { margin-left: auto; }
+.bg-dark { background-color: #343a40 !important; }
+.bg-hero { background-color: #7952b3; } */
+
+/* CALLOUT */
+.bd-callout { padding:1.25rem; margin-top:1.25rem; margin-bottom:1.25rem; border:1px solid #e9ecef; border-left-width:.25rem; border-radius:.25rem }
+.bd-callout h4 { margin-bottom:.25rem }
+.bd-callout p:last-child { margin-bottom:0 }
+.bd-callout code { border-radius:.25rem }
+.bd-callout+.bd-callout { margin-top:-.25rem }
+.bd-callout-info { border-left-color:#5bc0de }
+.bd-callout-warning { border-left-color:#f0ad4e }
+.bd-callout-danger { border-left-color:#d9534f }
+
+.no_img{
+  background-color: #2A4486 !important;
+  background-image: none;
+}
+.plastic_balls img{
+    width: 25% !important;
+}
+.size_ed img{
+    width: 50%;
+}
+.mbbr img{
+    width: 45% !important;
+}
+.qr img{
+    width: 15% !important;
+}
+.qr caption{
+    text-align: center;
+    font-size: 15px;
+}
+#audio {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  bottom: 20px;
+  right: 0;
+  position: fixed;
+  z-index: 100;
+}
+#audio:hover {
+  opacity: 0.9;
+}
+#audio img {
+  width: 35px;
+  height: auto;
+}
+
+/* Modification in Bootstrap */
+.nav-link:hover {
+  color: #e89e2b !important;
+}
+
+.nav-link{
+  padding-right: 1.5rem !important;
+}
+
+/* footer */
+footer a { color: white; font-weight: bold; text-decoration: none; }
+footer a:hover { color: white; text-decoration: underline; }
+
+a {
+    text-decoration: none !important;
+}
+
+
+/* header */
+.box{
+    width: 100%;
+    height: max-content;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(https://static.igem.wiki/teams/4428/wiki/font/montserrat-regular.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url(https://static.igem.wiki/teams/4428/wiki/font/montserrat-bold.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat Semibold';
+    src: url(https://static.igem.wiki/teams/4428/wiki/font/montserrat-semibold.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat Light';
+    src: url(https://static.igem.wiki/teams/4428/wiki/font/montserrat-light.ttf);
+}
+
+/* cover page */
+
+.title {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.title-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.threat-section {
+    padding: 90px;
+}
+
+.index-box1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+}
+
+.index-box1 h1 {
+    color: #122659;
+}
+
+.index-box1 p {
+    color: #122659;
+}
+
+.index-box1 h1 {
+    font-weight: 600;
+    font-size: 45px;
+}
+
+.index-box1 p {
+    font-size: 22px;
+}
+
+.heading1 {
+    width: 40%;
+    display: inline;
+}
+
+.text1 {
+    width: 90%;
+    display: inline;
+}
+
+.threat-image {
+    width: 90%;
+}
+
+.threats-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    /* padding: 2%; */
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+.threat-div h1 {
+    font-size: 43px;
+    color: #2A4486;
+}
+
+.threat-div p {
+    font-size: 21px;
+    color: #2A4486;
+}
+
+.threat-image-div {
+    text-align: center;
+}
+
+.economic-implication-section {
+    background-color: #2F4454;
+    padding: 80px;
+}
+
+.economic-implication-section h1 {
+    color: #EBA98F;
+    text-align: center;
+    font-size: 43px;
+}
+
+.economic-text p {
+    font-size: 21px;
+    color: white;
+    font-weight: 400;
+}
+
+.economic-text img {
+    width: 70%;
+    height: auto;
+    margin-top: 90px;
+    padding-left: 60px;
+}
+
+.economic-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding-top: 3%;
+}
+
+.problem-solution-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+}
+
+.problem-div {
+    padding: 9%;
+}
+
+.problem-div h1 {
+    font-size: 43px;
+    color: #002958;
+}
+
+.problem-div p {
+    font-size: 21px;
+    line-height: 52px;
+    color: #002958;
+}
+
+.solution-div {
+    background-color: #002958;
+    padding: 9%;
+    color: white;
+}
+
+.solution-div h1 {
+    font-size: 43px;
+}
+
+.solution-div p {
+    font-size: 21px;
+    color: white;
+    line-height: 52px;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+}
+
+.icons img {
+    width: 70%;
+    height: auto;
+}
+
+.how-section {
+    background-color: #2F4454;
+    padding: 50px;
+}
+
+.how-section h1 {
+    color: #EBA98F;
+    text-align: center;
+    font-size: 43px;
+}
+
+.how-section p {
+    color: #f2dcd3;
+    font-size: 21px;
+    line-height: 50px;
+    font-weight: 400;
+}
+
+.how-images {
+    padding: 7%;
+    text-align: center;
+}
+
+.heading-brown {
+    color: #EBA98F;
+    font-size: 43px;
+}
+
+.heading-main {
+    text-align: center;
+}
+
+.text-white {
+    color: white;
+    font-size: 21px;
+}
+
+.index-text-box {
+    width: 65%;
+    padding: 2%;
+    display: inline;
+}
+
+.economic-implication-section {
+    width: 100%;
+    padding: 9%;
+}
+
+.problem {
+    width: 100%;
+}
+
+.problem-img-div,
+.solution-img-div {
+    width: 50%;
+    display: inline;
+}
+
+.problem-img,
+.solution-img {
+    width: 100%;
+}
+
+.implications {
+    padding: 50px 15% 50px 15%;
+    text-align: center;
+}
+
+.implications h1 {
+    font-size: 45px;
+}
+
+.horizontal-line {
+    border-bottom: 2px solid #122659;
+    width: 420px;
+    margin: 0 auto;
+}
+
+.one {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 40px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.one h1 {
+    text-align: right;
+    font-size: 50px;
+}
+
+.one p {
+    margin: 1.5% 0;
+}
+
+.implication-box {
+    background-color: #2A4486;
+    color: #EBA98F;
+    font-size: 25px;
+    align-self: center;
+    border-radius: 35px;
+}
+
+.one img {
+    width: 70%;
+    height: auto;
+}
+
+
+/* end of cover page */
+
+/* team page*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /* font-weight: 100; */
+}
+
+.buttons {
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  display: grid;
+}
+
+.buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 48px;
+  outline: none;
+  padding: 0;
+  width: 48px;
+  box-shadow: 0px 4px 11px 0px #000000;
+  border-radius: 50%;
+}
+
+#play {
+  background-image: url(../images/play1.svg);
+}
+
+#play.played {
+  background-image: url(../images/play3.svg);
+}
+
+#pause {
+  background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause.svg);
+}
+
+#pause.paused {
+  background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause1.svg);
+}
+
+#stop {
+  background-image: url(../images/stop1.svg);
+}
+
+#stop.stopped {
+  background-image: url(../images/stop2.svg);
+}
+
+.header {
+  min-height: 90vh;
+  width: 100%;
+  background-color: #2f4454;
+}
+
+.pageName h1 {
+  font-size: 10vw;
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* .person {
+} */
+
+.img img {
+  width: 100%;
+  /* width: 300px; */
+  border-radius: 7px;
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.main {
+  padding: 70px 30px;
+  background-color: white;
+  color: black;
+}
+.name h2 {
+  font-size: 22px;
+  /* text-align: center; */
+  margin-top: 25px;
+}
+
+.line {
+  border: #e89e2b solid 1px;
+  display: block;
+  float: left;
+  margin: 1em auto 1em auto;
+  width: 80px;
+}
+.about {
+  line-height: 1.5em;
+  margin-top: 25px;
+}
+.branch {
+  margin-top: 25px;
+}
+.person {
+  margin-bottom: 70px;
+}
+.person:nth-last-child(1) {
+  margin-bottom: 0px;
+}
+
+.play {
+  width: 45px;
+  height: 45px;
+}
+.pause {
+  width: 45px;
+  height: 45px;
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 70px 40px;
+  }
+  .person {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-column-gap: 75px;
+    margin-bottom: 120px;
+  }
+  .person:nth-child(2n) .img {
+    grid-column: 4/3;
+  }
+  .person:nth-child(2n) .info {
+    grid-row: 1/1;
+    grid-column: 1/3;
+  }
+  .img img {
+    width: 300px;
+  }
+  .name h2 {
+    font-size: 26px;
+    margin-top: 0px;
+    text-align: left;
+  }
+
+  .line {
+    border: #e89e2b solid 1px;
+    display: block;
+    float: left;
+    margin: 1em auto 1em auto;
+    width: 80px;
+  }
+}
+
+@media (min-width: 767px) {
+  .img img {
+    width: 350px;
+  }
+}
+@media (min-width: 400px) {
+  .img img {
+    width: 400px;
+  }
+}
+
+/* end of team page */
+
+
+/* parts */
+
+.cntr{
+  text-align: center;
+}
+
+.cntr img{
+    width: 50%;
+}
+
+.cover_img_parts {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(https://static.igem.wiki/teams/4428/wiki/wet-lab/parts/cover-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.cover_img_parts h1 {
+    z-index: 1;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 27px;
+    color: #eba98f;
+}
+
+.whiteBlock,
+.blueGreyishBlock,
+.blueExperimentDataBlock {
+    padding: 6%;
+}
+
+.whiteBlock h2 {
+    color: #122659;
+    font-weight: 400;
+    margin-bottom: 22px;
+    font-size: 35px;
+    line-height: 78px;
+}
+
+.gridWhite {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    grid-column-gap: 75px;
+}
+
+.whiteBlock .para {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 35px;
+    letter-spacing: 0.04em;
+    color: #002958;
+}
+
+.whiteBlock .subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    color: #122659;
+    padding-left: 30px;
+}
+
+.blueGreyishBlock {
+    background: #2f4454;
+}
+
+.blueGreyishBlock h2 {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 27px;
+    color: #eba98f;
+}
+
+.blueGreyishBlock .para {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 35px;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+}
+
+.blueExperimentDataBlock {
+    background: #002958;
+}
+
+.blueExperimentDataBlock .para {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 35px;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+}
+
+.blueExperimentDataBlock .subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    /* text-align: right; */
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.blueExperimentDataBlock .img_absorption_capacities {
+    text-align: center;
+}
+
+.whiteBlock .img_PBrRMBD {
+    text-align: center;
+}
+
+.PbrR_MBD .subtitle {
+    padding-bottom: 20px;
+}
+
+.blueExperimentDataBlock .img_display {
+    text-align: center;
+}
+
+.blueExperimentDataBlock h2 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 78px;
+    color: #ffffff;
+}
+
+
+/* end of parts */
+
+
+/* notebook  */
+
+.horizontal-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0px;
+}
+
+.white-div {
+    background-color: white;
+    color: #122659;
+    padding: 15%;
+}
+
+.white-div h1 {
+    font-size: 45px;
+}
+
+.white-div p {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.blue-div {
+    background-color: #2F4454;
+    padding: 15%;
+}
+
+.blue-div h1 {
+    font-size: 45px;
+    color: #EBA98F;
+}
+
+.blue-div p {
+    font-size: 22px;
+    line-height: 30px;
+    color: #F2DCD3;
+    text-align: justify;
+}
+
+.blue-bg {
+    background-color: #122659;
+    padding: 80px;
+    text-align: center;
+}
+
+.week11-head {
+    color: #122659;
+    font-weight: 600;
+    font-size: 45px;
+    padding: 50px 0 0 95px;
+}
+
+.week11 {
+    display: grid;
+    padding-left: 60px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+}
+
+.week11-left {
+    padding: 9%;
+    font-size: 20px;
+    color: #122659;
+    display: grid;
+    grid-template-columns: 97fr 1fr;
+    line-height: 30px;
+}
+
+.week11-left img {
+    width: 100%;
+    height: auto;
+}
+
+.week11-right {
+    padding: 9% 9% 9% 4%;
+    color: #122659;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.week11-images img {
+    width: 70%;
+    height: auto;
+    display: block;
+    padding: 7%;
+}
+
+.week11-left-text {
+    display: inline;
+    padding-right: 4%;
+}
+
+.vertical-line {
+    display: inline;
+    border-left: 4px solid #122659;
+    margin-left: 30%;
+    height: 400px;
+}
+
+.week15-img {
+    width: 90%;
+    height: auto;
+}
+
+.week16 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+}
+
+.week16 p {
+    padding-right: 12%;
+    font-size: 22px;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.week16 img {
+    width: 90%;
+    height: auto;
+}
+
+.week17-img {
+    text-align: center;
+}
+
+.week18 {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-column-gap: 70px;
+}
+
+.week18 img {
+    width: 90%;
+    height: auto;
+}
+
+
+
+
+/* end of notebook */
+
+
+/* Human Practices */
+
+.hp_2nd_block {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  grid-column-gap: 30px;
+}
+
+/* .point_heading {
+  font-weight: ;
+} */
+
+.grid_in_blue {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+
+
+.img_wwtp img {
+  width: 450px;
+}
+
+.proof h3 {
+  text-align: center;
+  font-weight: 600;
+}
+.proof {
+  padding-top: 0px;
+}
+.proof hr {
+  border-top: 2px solid #122659;
+}
+.proof img {
+  width: 90%;
+  text-align: center;
+}
+.img_prof {
+  text-align: center;
+}
+
+/* end of human practices */
+
+/* safety */
+
+.saf1-left {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-column-gap: 40px;
+    padding: 4%;
+    font-size: 22px;
+    line-height: 30px;
+    color: #122659;
+}
+
+.saf1-left img {
+    width: 90%;
+    height: auto;
+}
+
+.saf1-right {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-column-gap: 15px;
+    padding: 4%;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: justify;
+    color: #122659;
+}
+
+.saf1-right img {
+    width: 90%;
+    height: auto;
+}
+
+.faq {
+    margin: 4%;
+    padding: 4%;
+    background-color: #F2DCD3CF;
+}
+
+.faq h1 {
+    font-size: 45px;
+}
+
+.faq p {
+    font-size: 22px;
+}
+
+
+
+/* end of safety  */
+
+/* description */
+
+.section-blue {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #2F4454;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+
+.section-blue h1 {
+    z-index: 1;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 30px;
+    color: #eba98f;
+}
+
+.description {
+    padding: 6%;
+    color: #122659;
+    text-align: justify;
+}
+
+.description p {
+    font-size: 17px;
+    line-height: 27px;
+}
+
+.description ol {
+    font-size: 20px;
+}
+
+.description h1 {
+    font-weight: 600;
+    font-size: 43px;
+}
+
+.desc-references {
+    background-color: #122659;
+    color: white;
+    padding: 5%;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.desc-references a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* end of description */
+
+/* model */
+.img_equation {
+  text-align: center;
+}
+
+.img_equation img {
+  width: 800px;
+}
+
+.img_i_o {
+  text-align: center;
+  /* width: 700px; */
+}
+.img_i_o img {
+  width: 40%;
+}
+
+.pbrr_img {
+  text-align: center;
+}
+
+/* .modelling_cover {
+  background-image: url();
+  opacity: 0.6;
+}
+.modelling_cover h1{
+    color: #000000;
+} */
+
+.cover_img_awards {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background-image: url(https://static.igem.wiki/teams/4428/wiki/implementation/iitd-bg.png);
+    
+    /* filter: opacity(0.6); */
+    display: flex;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cover_img_awards h1 {
+    z-index: 3;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 27px;
+    color: #EBA98F;
+}
+
+.cover_img_model {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(https://static.igem.wiki/teams/4428/wiki/model/model-cover-new.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.6);
+    display: flex;
+}
+
+.cover_img_model h1 {
+    z-index: 1;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 27px;
+    color: #000000;
+}
+
+
+
+/* end of model */
+
+/* design  */
+
+.section-blue {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #081432CC;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+.cover_img_partnership {
+    background: url(https://static.igem.wiki/teams/4428/wiki/awards/hands-partnership-cover.png);
+    background-size: cover;
+    background-color: #081432CC;
+}
+.section-blue h1 {
+    z-index: 1;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 27px;
+    color: #eba98f;
+}
+
+
+/* end of design */
+
+/* attributions */
+
+.cover_img_attributions {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(https://static.igem.wiki/teams/4428/wiki/team/team-photo-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.91);
+    display: flex;
+}
+
+.cover_img_attributions h1 {
+    z-index: 1;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 27px;
+    color: #eba98f;
+}
+
+.faculty {
+    background-color: #2F4454;
+    padding: 7%;
+}
+
+.faculty h1 {
+    color: #EBA98F;
+    font-weight: 600;
+    font-size: 45px;
+}
+
+.faculty-div {
+    font-weight: 500;
+    color: white;
+    display: grid;
+    grid-template-columns: 49fr 2fr 49fr;
+    grid-column-gap: 20px;
+    text-align: center;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.prof-desc {
+    text-align: justify;
+}
+
+.faculty-div img {
+    width: 40%;
+    height: auto;
+    padding-bottom: 2%;
+}
+
+.fac-img {
+    text-align: center;
+}
+
+.vert-line {
+    border-right: 3px solid #F2DCD3;
+    padding: 1%;
+    height: 250px;
+    margin-top: 320px;
+}
+
+.advisors {
+    background-color: #F2DCD3;
+    line-height: 25px;
+}
+
+.advisors h1 {
+    font-size: 33px;
+}
+
+.advisors h2 {
+    font-size: 25px;
+}
+
+.description h2 {
+    font-size: 28px;
+}
+
+.fin-support {
+    background-color: #2F4454;
+    color: white;
+}
+
+.fin-support h1 {
+    color: #EBA98F;
+}
+
+/* end of attributions */
+
+
+/* engineering */
+
+.engineering h2 {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.engineering h3 {
+    font-weight: 600;
+}
+
+
+/* end of engineering */
+
+/* proof-of-concept */
+
+.poc-blue {
+    background-color: #122659;
+    color: #F2DCD3;
+    padding: 8%;
+}
+
+.poc-blue h1 {
+    font-size: 45px;
+    text-align: center;
+}
+
+.poc-blue p {
+    font-size: 22px;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.poc-colour {
+    color: #EBA98F;
+}
+
+.red-strip {
+    text-align: center;
+    background-color: #762200;
+    color: #F2DCD3;
+    padding: 1%;
+    border-radius: 35px;
+}
+
+/* end of proof of concept */
+
+/* hp further */
+.hp_main {
+  display: grid;
+  grid-template-columns: 1.5fr 4fr;
+  grid-column-gap: 0px;
+}
+
+.hp_cover {
+  position: relative;
+  z-index: 2;
+}
+.hp_index {
+  position: fixed;
+  padding-right: 1%;
+  /* z-index: 4; */
+  top: 60px;
+  left: 20px;
+}
+.hp_index a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 50px;
+  color: #122659;
+}
+.empty {
+  background: #f2dcd3;
+  /* width: 357px; */
+}
+
+.questionnaires a {
+  color: #122659;
+  line-height: 35px;
+}
+
+.records a {
+  color: white;
+}
+
+.img_hp{
+    background-image: url(https://static.igem.wiki/teams/4428/wiki/hp/p32.jpg);
+}
+/* end of hp further */
+
+
+/* protocols */
+
+.protocols h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 71px;
+  color: #122659;
+}
+
+.protocols a {
+  color: #122659;
+}
+.protocols ol {
+  line-height: 50px !important;
+}
+.protocols a {
+  text-decoration: none;
+}
+.protocols span {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 60px;
+  text-align: justify;
+  letter-spacing: 0.04em;
+  color: #eba98f;
+}
+
+.grid_ligation {
+  display: grid;
+  grid-template-columns: 49fr 2fr 49fr;
+  grid-column-gap: 20px;
+}
+
+.vert-line_protocol {
+  border-left: 4px solid #122659;
+  padding: 1%;
+  height: auto;
+  /* margin-top: 380px; */
+}
+
+
+/* end of protocol */
+
+/* implementation */
+
+.cover_img_implementation {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(https://static.igem.wiki/teams/4428/wiki/implementation/implementation-main.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    filter: opacity(0.9);
+}
+
+.cover_img_implementation h1 {
+    z-index: 1;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 27px;
+    color: #762200;
+}
+
+
+/* end of implementation */
+
+
+/* results */
+
+.overview {
+    background-color: #F2DCD3CF;
+    padding: 6%;
+    text-align: justify;
+}
+
+.overview h1 {
+    color: #122659;
+}
+
+.overview p {
+    color: black;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.how-section h2 {
+    color: #F2DCD3;
+}
+
+.result-img {
+    width: 60%;
+    height: auto;
+}
+
+.justify-class {
+    text-align: justify;
+}
+
+.result-imgs {
+    display: grid;
+    padding: 7% 7% 2% 7%;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    text-align: center;
+}
+
+.result-imgs img {
+    width: 95%;
+    height: auto;
+}
+
+.img-desc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    padding: 0 7%;
+}
+
+.how-section p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.how-section h2 {
+    font-size: 35px;
+}
+
+.blue-section p {
+    font-size: 18px;
+}
+
+.mud {
+    background-color: #F2DCD3;
+    color: #2A4486;
+}
+
+
+/* end of results */
+
+.blue-section p {
+    font-size: 20px;
+}
+.mud {
+    background-color: #EBA98F;
+    color: #2A4486;
+}
+
+
+/* collaborations */
+
+.patras {
+    padding: 7%;
+    background-color: #2F4454;
+}
+
+.patras h1 {
+    color: #EBA98F;
+    font-size: 46px;
+}
+
+.patras p {
+    color: white;
+    font-size: 22px;
+}
+.patras h2{
+    color: #EBA98F;
+    font-size: 28px;
+}
+.chennai {
+    padding: 7%;
+    background-color: #F2DCD3;
+    color: #002958;
+}
+.chennai h2{
+    font-size: 28px;
+}
+
+.chat {
+    padding: 5% 10% 1% 10%;
+}
+
+.vellore img {
+    width: 60%;
+}
+
+
+/* end of collaborations */
+
+/* education */
+
+.education {
+    padding: 8%;
+    background-color: #F2DCD3;
+    color: #2A4486;
+}
+
+.link-box {
+    width: 400px;
+    background-color: #476378;
+    color: #F2DCD3;
+    padding-top: 10px;
+    padding-bottom: 0.5px;
+    font-size: 18px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.link-box a {
+    color: #F2DCD3;
+}
+
+/* enddd */
+
+.education {
+    text-align: justify;
+}
+
+.constants_img img{
+    width: 70%;
+}
+.constants_img, .top_sensitive{
+    text-align: center;
+}
+.img_formula img{
+    width: 50%;
+}
+.pbrr_img img{
+    width: 60%;
+}
+.forty_five img {
+  width: 45% !important;
+}
+.top_sensitive img{
+    width: 70%;
+}
+.water_pbrr img{
+    width: 50%;
+}
+.water_pbrr {
+    text-align: center;
+}
+.caption{
+    font-weight: 400;
+    font-size: 20px;
+    color: #122659;
+}
+.video_drylab {
+    text-align: center;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.pad {
+  padding: 20px;
+}
+th {
+  background-color: #7fd577;
+}
+.teensotees img{
+    width: 330px !important;
+}
+
+/* final edits by r */
+
+.how-section {
+    padding: 9%;
+}
+
+.how-section ol {
+    color: #F2DCD3;
+    line-height: 30px;
+}
+
+.how-section h3 {
+    color: #F2DCD3;
+}
+
+.education h1 {
+    font-size: 45px;
+}
+
+.education p {
+    font-size: 19px;
+    line-height: 30px;
+}
+
+.e-img img {
+    width: 40%;
+    height: auto;
+}
+
+.milestones-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    text-align: right;
+}
+
+.mil-main-img {
+    padding-top: 45%;
+    width: 80%;
+}
+
+.p-white ol {
+    line-height: 30px;
+}
+
+.entre-main {
+    display: grid;
+    grid-template-columns: 1.4fr 5fr;
+}
+
+.entre-index {
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    z-index: 1;
+}
+
+.entre-index p{
+    z-index: 1;
+}
+
+.entre-index a {
+    font-size: 18px;
+    line-height: 45px;
+    color: white;
+    font-weight: 400;
+    z-index: 1;
+}
+
+.empty2 {
+    background-color: #122659;
+}
+
+.footer-bg {
+    background-color: #2A4486;
+}
+
+.row h5 {
+    font-size: 17px;
+}
+
+.sponsor p {
+    font-size: 18px;
+}
+
+.col p {
+    font-size: 16px;
+}
+
+.footer-st {
+    padding: 4% 4.5% 2% 5%;
+}
+/* GOLD MEDAL START */
+#container {
+  margin: 0%;
+  /* position: absolute;
+  right: 140px;
+  top: 50px; */
+  position: absolute;
+  top: 58.5%;
+  left: 35%;
+  display: inline-block;
+  z-index: 1;
+}
+
+#container-mobile {
+  margin: 0%;
+  position: absolute;
+  right: -30px;
+  top: 40px;
+  display: none;
+  z-index: 1;
+}
+
+#circle {
+  position: relative;
+  z-index: 100;
+}
+
+#circle text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f5c21d;
+}
+
+#circle-mobile text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f5c21d;
+}
+
+/* #circle svg {
+  -webkit-animation-name: rotate;
+  -moz-animation-name: rotate;
+  -ms-animation-name: rotate;
+  -o-animation-name: rotate;
+  animation-name: rotate;
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  -ms-animation-duration: 5s;
+  -o-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+} */
+
+/* @-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+  }
+}
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(360deg);
+  }
+  to {
+    -moz-transform: rotate(0);
+  }
+}
+@-ms-keyframes rotate {
+  from {
+    -ms-transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0);
+  }
+}
+@-o-keyframes rotate {
+  from {
+    -o-transform: rotate(360deg);
+  }
+  to {
+    -o-transform: rotate(0);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+} */
+
+#container img {
+  position: absolute;
+  top: 85px;
+  right: 85px;
+  border-radius: 100%;
+  height: 230px;
+  padding: 42px;
+  border: 3px solid #AB6343;
+  background-color: #6D280E;
+}
+
+#container-mobile img {
+  position: absolute;
+  top: 55px;
+  right: 55px;
+  border-radius: 100%;
+  height: 140px;
+  padding: 23px;
+  border: 3px solid #AB6343;
+  background-color: #6D280E;
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    display: none;
+  }
+
+  #container-mobile {
+    display: inline-block;
+  }
+}
+/* GOLD MEDAL END */
+/* end r */
+

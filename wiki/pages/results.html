@@ -1,0 +1,149 @@
+{% extends "layout.html" %} {% block page_content %}
+<article>
+<div class="cover_img_parts">
+    <h1>Results</h1>
+</div>
+
+<div class="overview">
+    <h1>Overview</h1>
+    <br>
+    <p>
+        We spent around 6 months in the laboratory which was the most crucial and labour-intensive part of our project. After several trials and errors, we were finally able to slowly move towards our goal. Following are the intermediate and final results that
+        we obtained.
+
+    </p>
+</div>
+<div class="description">
+    <h2><b>Gene amplification and insert preparation</b></h2>
+    <br>
+    <p>
+        For the construction of the clone, we revived the primers and genes. We amplified the genes through PCR at their respective annealing temperatures, 61°C (calculated with NEB Tm calculator) with Taq polymerase. Then they were run on a 1.8% agarose gel
+        alongside a 100bp ladder and extracted via gel elution. The sizes of the amplified genes were confirmed to ensure correct amplification. For the preparation of inserts, we digested the amplified genes with SacI and HindIII restriction enzymes
+        overnight.
+
+    </p>
+    <div style="text-align: center;">
+        <img src="https://static.igem.wiki/teams/4428/wiki/result/results1.png" alt="">
+    </div>
+    <br>
+    <h2><b>Vector Preparation</b></h2>
+    <br>
+    <p>
+        For the preparation of the vector, we inoculated pSR2 colonies in Luria Broth containing Kanamycin (Kan) and incubated them overnight, shaking at 180rpm. Cells were harvested and pSR2 was isolated from the harvested cells. This isolated pSR2 was run on
+        1% agarose gel alongside a 1kb ladder. Then restriction digestion of 1.5 h was performed at 37°C with enzymes SacI and HindIII in cutsmart buffer. The Plasmid pSR2 is of size 6597 bp. After restriction digestion, a vector of length 5336 bp and
+        a release of 1261 bp were expected. These sizes correspond with the obtained results of gel electrophoresis of the digested plasmid confirming the vector preparation.
+    </p>
+    <div style="text-align: center;">
+        <img src="https://static.igem.wiki/teams/4428/wiki/result/results2.png" alt="">
+    </div>
+    <br>
+    <h2><b>Ligation and Transformation</b></h2>
+    <br>
+    <p>
+        The vector obtained above was then ligated with the 2 prepared inserts, giving us the recombinant pSR2 which was subsequently transformed into <i> E.coli </i> DH5α.
+    </p>
+    <div style="text-align: center;">
+        <img src="https://static.igem.wiki/teams/4428/wiki/result/results3.png" alt="">
+    </div>
+</div>
+
+<div class="how-section justify-class">
+    <h2><b>Confirmation of the clone</b></h3>
+        <br>
+        <p>
+            In order to confirm the clone, colony PCR was performed with the obtained colonies using their respective primers. When positive results for colony PCR were obtained, further confirmation was performed using restriction digestion of the recombinant plasmids.
+            For the final confirmation, these colonies were inoculated in order to isolate the recombinant plasmid. These plasmids were further digested using SacI and HindIII enzymes to check the size of the release obtained. The size of the release
+            was found to be the same as their respective inserts, thus confirming that the clone was successful.
+        </p>
+        <div style="text-align: center;">
+            <img class="result-img" src="https://static.igem.wiki/teams/4428/wiki/result/results4.png" alt="">
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <img class="result-img" src="https://static.igem.wiki/teams/4428/wiki/result/results5.png" alt="">
+        </div>
+
+</div>
+
+<div class="description">
+    <h2>Testing protein expression using SDS-PAGE</h2>
+    <br>
+    <p>
+        The confirmed clones were then transformed in <i> E. coli </i> strain pLysS for proper expression of the introduced proteins. To confirm whether the proteins were successfully being expressed or not, we induced the engineered cells for different durations of time
+        and analysed their protein content on an SDS-PAGE gel.
+    </p>
+    <br>
+    <div style="text-align: center;">
+        <img src="https://static.igem.wiki/teams/4428/wiki/result/results6.png" alt="">
+    </div>
+    <br>
+    <p>
+        The SDS-PAGE results for PbrR transformed cells show the expression of the protein as we induce the sample. The uninduced sample shows no expression of the protein. The 3-hour induced sample also doesn’t show any discernable expression of the protein.
+        However, at 6 hours, the protein is clearly expressed and shows a significant band corresponding to 16kDa. For the overnight induced sample, the intensity of the band reduces and we attribute that to cell death in the system. However, the results
+        of SDS-PAGE for the PbrR-MBD transformed cells did not explicitly show such results. There wasn’t any major difference in bands between the induced and the uninduced samples. We believe this could potentially be because the MBD is an extremely
+        small domain of the protein and may be extremely hard to detect. Our strategy now would be to use more sensitive gels as well as separating the membrane fraction proteins from the rest of the cell for better results. At the same time, we have
+        begun testing how these engineered cells fare with lead samples.
+    </p>
+</div>
+<div class="desc-references blue-section">
+    <h3><b>Testing lead removal from artificially contaminated samples using ICP-MS</b></h2>
+        <br>
+        <p>
+            Inductively coupled plasma mass spectrometry (ICP-MS) is an analytical technique that can be used to measure elements at trace levels in biological fluids. We used this instrument, available in our institute, to test the concentrations of lead in our
+            treated samples. Our engineered cells were induced using IPTG for different amounts of time and then exposed to Pb(NO3)2 solution such that the final concentration of lead in the sample was 400 ppm. The artificially contaminated samples were
+            exposed to lead for 6 hours after which the solution was centrifuged to pellet the cells. Any remaining cells in the supernatant were removed using a filtration through a 0.2 micron filter. The concentration in the supernatant was checked
+            using ICP-MS. This analysis were performed for both PbrR and PbrR-MBD transformed cells.
+        </p>
+        <div class="result-imgs">
+            <img src="https://static.igem.wiki/teams/4428/wiki/result/results8.jpeg" alt="">
+            <img src="https://static.igem.wiki/teams/4428/wiki/result/results9.jpeg" alt="">
+        </div>
+        <div class="img-desc">
+            <p>
+                Sample A represents the initial concentration of the artificially contaminated water. Samples B, C and D are the contaminated samples treated with PbrR-MBD expressing cells for 6 hours. The bacteria were induced for different durations before the treatment.
+                Sample D is treated with uninduced cells: A. Original concentration of lead-contaminated sample, B. Contaminated sample treated with PbrR-MBD expressing bacteria which were induced for 6 hours, C. Contaminated sample treated with PbrR-MBD
+                expressing bacteria which were induced for 12 hours (overnight induction), D. Contaminated sample treated with uninduced PbrR-MBD expressing bacteria.
+
+            </p>
+            <p>
+                Sample A represents the initial concentration of the artificially contaminated water. Samples B, C and D are the contaminated samples treated with PbrR-expressing cells for 6 hours. The bacteria were induced for different durations before the treatment.
+                Sample D is treated with uninduced cells: A. Original concentration of lead-contaminated sample, B. Contaminated sample treated with PbrR expressing bacteria which were induced for 6 hours, C. Contaminated sample treated with PbrR expressing
+                bacteria which were induced for 12 hours (overnight induction), D. Contaminated sample treated with uninduced PbrR expressing bacteria.
+            </p>
+        </div>
+        <br>
+        <p>
+            The observed results show a drastic decrease in the concentration of lead, for both, PbrR-MBD and PbrR expressing <i> E. coli.</i>  This confirms that the engineered cells are able to substantially remove lead from the sample at this initial concentration of lead
+            which is equivalent to that found in treated industrial wastewater. Additionally, we see 6-hour-induced samples perform better than overnight-induced samples which confirms the results from SDS-PAGE as well, which displayed the best expression
+            of the protein at 6-hour induction.
+        </p>
+        <br>
+        <p>
+            Interestingly, we observed that even the uninduced samples were able to treat the contaminated sample and remove lead from it. This was quite unexpected and led us to verify if there was leaky expression of the gene in the cell even in the absence of
+            IPTG. This was verified by the study we referenced for the BclB anchor. S. Rangra et al. also used the same anchor protein under the control of a T7 promoter in the same strain we have used. Their results also reflect leaky expression of their
+            cloned surface protein. Thus, we deduce that T7, being a strong promoter, does have some leaky expression in the cell due to which the uninduced cells are also expressing the lead-binding protein and adsorbing lead. Here, we believe that the
+            concentration of lead provided in the sample is limiting the capacity of adsorption for the induced samples. Hence, we shall try to study the adsorption capacity of these cells at higher concentrations of lead in further experiments.
+        </p>
+        <br>
+        <h2><b>Testing lead recovery from engineered cells using ICP-MS</b></h2>
+        <br>
+        <p>
+            Since we observe the greatest amount of protein being expressed after 6-hour induction, we chose these 6-hour induced cells to test if it was possible to recover the adsorbed lead. We first used the engineered cells to treat artificially contaminated
+            lead samples. Then, we centrifuged the sample to separate the cells from the treated water. The cell pellet was then treated with a strong acid, HNO3, to desorb the lead from the cell surface. The obtained HNO3 solution containing lead and
+            cells was again centrifuged to remove cells out of it and the cell-free solution was tested for the recovered lead concentration using ICP-MS.
+        </p>
+        <div class="result-imgs">
+            <img src="https://static.igem.wiki/teams/4428/wiki/result/results10.jpeg" alt="">
+            <img src="https://static.igem.wiki/teams/4428/wiki/result/results11.jpeg" alt="">
+        </div>
+        <br>
+        <p>
+            We observe that almost all the lead adsorbed on the cells is recovered from the HNO3 treatment as we get extremely high concentrations of lead, greater than 390 ppb, after the desorption. The cumulative concentration after treatment and after recovery
+            is observed to be slightly greater than 400 ppb which can be attributed to pipetting error. Additionally, we checked if the recovered cells underwent growth arrest or cell lysis after the HNO3 treatment for recovery. It was observed that the
+            cells were still viable and didn’t undergo lysis. Thus, it was established that it is possible to recover most of the adsorbed lead through acidic leaching without lysing the cells.
+        </p>
+
+</div>
+</article>
+
+{% endblock %}

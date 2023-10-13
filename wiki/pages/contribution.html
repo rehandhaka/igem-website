@@ -1,0 +1,68 @@
+{% extends "layout.html" %} {% block page_content %}
+
+
+<article>
+<div class="section-blue">
+    <h1>Contribution</h1>
+</div>
+
+<div class="description">
+    <h1>BclB anchoring protein:</h1>
+    <br>
+    <p>
+        Our main contribution for future iGEM teams was the design of BclB anchor motif used for the expression of PbrR lead binding protein on the surface of <i> E. coli </i>.
+    </p>
+    <br>
+    <p>
+        Several anchoring motifs which have been used for surface display of proteins on <i> E. coli </i> suffer from the limitation of expressing only small peptides and proteins on the cell surface. To overcome this, heterologous anchoring motifs like BclB have been
+        used as anchoring motifs. BclB is a collagen-like glycoprotein found in the outermost layer of the B. anthracis spore called exosporium. These glycoproteins are incorporated into the exosporium by the action of certain sequences near the N-terminal
+        region of the BclB glycoproteins. In order to evaluate whether or not the N terminus of BclB is capable of functioning as an anchoring motif, a surface display vector containing the whole sequence of BclB's 28 amino acids (aa) was produced. Because
+        BclB is smaller in size, it may have resulted in the display of correctly folded enzymes, which led to increased activity.
+
+    </p>
+    <br>
+    <p>
+        The future iGEM teams can use this anchor motif and use it for the expression of the cell surface display of polyhistidine peptides that causes the removal of heavy metals (divalent metal ions such as Cd2+, Cu2+, Zn2+, Ni2+, etc.) They can use this anchor
+        motif to express any other proteins on the cell surface.
+
+    </p>
+    <br>
+    <h1>
+        Added documentation to existing parts:
+    </h1>
+    <br>
+    <ol>
+        <li>
+            Mistake in <a href="http://parts.igem.org/Part:BBa_K1701001">Part:BBa_K1701001</a>
+            <br> While analysing the existing literature during structural modelling of PbrR protein. We went through <a href="http://parts.igem.org/Part:BBa_K1701001">Part:BBa_K1701001</a> and found the structure of PbrR being cited from <a href="https://www.rcsb.org/structure/2mtq">PDB ID: 2MTQ</a>.
+            But according to the information we had, PbrR protein is a 145 amino acid sequence while 2MTQ PDB ID protein is a 73 amino acid sequence. While going through the DNA sequence of <a href="http://parts.igem.org/Part:BBa_K1701001">Part:BBa_K1701001</a>            and translating it, we found that it will form a 145 amino acid sequence same as PbrR. So while the part sequence is of PbrR, i.e. around 145 amino acids, the structure has 73 amino acids. Hence, we conclude that it is a wrong structure. We
+            are providing the link to the predicted structure at the end, based on <a href="https://www.uniprot.org/uniprotkb/Q58AJ5/entry">UniProt</a> .
+        </li>
+        <br>
+        <li>
+            Mistake in <a href="http://parts.igem.org/Part:BBa_K1958007">Part:BBa_K1958007</a>
+            <br> While finding the lead binding residues of PbrR, we went through <a href="http://parts.igem.org/Part:BBa_K1958007">Part:BBa_K1958007</a> and found that Cys78, Cys113 and Cys122 lead binding residues of PbrR691 are given as lead binding
+            residues of PbrR [2]. But on translating the DNA sequence attached with the part, we found that the translated amino acid sequence to be the sequence of PbrR which has no Cys residues at positions 78, 113, and 122. The Cys residues of PbrR
+            were at positions 79, 114 and 123 which are lead-binding residues of PbrR as mentioned in literature [1].
+        </li>
+        <br>
+    </ol> <br>
+    <p>This documentation will be beneficial for future teams because they will have access to correct structures, sequences, etc.  through iGEM registry only and need not go through extensive literature review and confirmation loops to get a sequence, structures for executing their pipeline. Also, PbrR, PbrR_MBD, PbrR691 proteins are very confusing since their prefix matches and on googling about them, a lot of information overlaps, thus leading to confusion on multiple instances like lead binding residues of these proteins  in our case. Thus structuring these crucial pieces of information is necessary for one to work with these proteins, which we had tried to do by providing and structuring the information on iGEM registry about these proteins.</p>
+</div> <br>
+<div class="desc-references">
+    <h1>References</h1>
+    <br>
+    <ol>
+        <li><a href="https://doi.org/10.1007/s10529-018-2533-4">
+            https://doi.org/10.1007/s10529-018-2533-4
+        </a>
+
+        </li> 
+        <li>
+            <a href="https://doi.org/10.1515%2F9783110434330-010 ">https://doi.org/10.1515%2F9783110434330-010</a>
+        </li>
+    </ol>
+</div>
+</article>
+
+{% endblock %}

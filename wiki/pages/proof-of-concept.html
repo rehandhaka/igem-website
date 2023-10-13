@@ -1,0 +1,71 @@
+{% extends "layout.html" %} {% block page_content %}
+<article>
+<div class="section-blue">
+    <h1>Proof of Concept</h1>
+</div>
+
+<div class="description">
+    <p>
+        Through our project, we aim to tackle lead contamination and poisoning by allowing the decentralised monitoring and treatment of contaminated water in India and worldwide. Among the first things we set out to establish, to build the foundation of the
+        proof of concept of our project, was to demonstrate that lead recovery through engineered bacterial biosorbants is truly possible at the concentrations at which industrial methods are not effective anymore.
+    </p>
+    <br>
+    <h4><b>Demonstrating Lead Adsorption from Contaminated Water</b></h2>
+        <br>
+        <p>
+            We designed our experiments such that our engineered lead adsorbing cells were exposed to 400 ppb of lead, equivalent to 0.4 mg/l of lead, the average concentration of industrially treated lead-contaminated effluents. In this concentration, we demonstrated
+            that our engineered <i> E. coli </i> could reduce the lead concentrations from 400 ppb to even lower than 10 ppb, a massive reduction in the lead concentration, much below the permissible limits set by CDC! Detailed analysis of the observations can
+            be seen on the *Results* page. This result not only proved that the system successfully adsorbed lead but also that it would work efficiently at the concentrations at which industrial recovery methods are no longer able to recover the lead.
+        </p>
+        <br>
+        <h4><b>Driving Incentivised Change</b></h4>
+        <p>
+            Lead poisoning and contamination have been known to be tremendous health concerns for years now. Nonetheless, there is little awareness of the issue. Additionally, monitoring heavy metals in wastewater, groundwater or drinking water is not common. Through
+            our stakeholder interactions, we learnt that there aren’t even basic lead detection systems used in wastewater treatment plants in India, treatment for the same was far-fetched to imagine. While policy changes regarding organised testing and
+            monitoring of lead levels in local areas, wastewater treatment plants and industries would be the best way to ensure regularised water treatment for lead removal, we understand that such changes are extremely hard to come about and take years
+            to be passed and implemented. Thus, we decided to popularise the testing and treatment of lead-contaminated water by incentivising the process and making it profitable for our stakeholders i.e. wastewater treatment plants and lead-based industries.
+            We decided to incentivise the lead removal process by introducing the possibility of commercialising the adsorbed lead by recovering it from the system. This recycled lead can be used further by lead-based industries as raw material.
+        </p>
+        <br>
+        <h4><b>Value Generation from Lead Recovery</b></h4>
+        <br>
+        <p>
+            Having identified the need to incentivise treatment for lead removal, we ideated and executed a strategy for recovering lead from contaminated samples. We designed an experiment to verify if it was possible to desorb the adsorbed lead from the engineered
+            <i> E. coli </i> once it is concentrated by the cells. We treated the engineered cells, which had adsorbed lead, with a strong acid like HNO3, which would lead to the leaching of the lead back into the medium as and when desired. Thus, the concentration
+            of the recovered lead was measured using ICP-MS. Remarkably, almost all of the lead absorbed by the bacteria was desorbed and released by the engineered cells. Thus, the contaminated sample was left with less than 10 ppb of lead, while the
+            lead recovered from the engineered cells was greater than 390 ppb in concentration. This high recovery rate was extremely promising in generating value from this attempt to clean up contaminated water.
+        </p>
+        <br>
+        <h4><b>Reusability of Engineered <i> E. coli </i></b></h4>
+        <br>
+        <p>
+            We additionally wanted to establish if the same cells, previously used to adsorb lead from a sample, could be reused to treat lead-contaminated samples and retrieve lead from them. Thus, successful recovery was established by checking the integrity of
+            the engineered cells used for the recovery of lead after the treatment with HNO3. It was observed that cells were not damaged or lysed in the process and could be reused for multiple cycles of adsorption and desorption for lead abetment and
+            recovery. A detailed analysis of the desorption experiment can be found in <a href="{{ url_for('pages', page='results') }}" style="text-decoration: none;">Results</a>.
+        </p>
+        <br>
+        <h4><b>Implications of the bioreactor for recovery</b></h4>
+        <br>
+        <p>
+            This fact that the engineered cells can be reused comes in extremely handy when designing a bioreactor to recover heavy metals from the system. The same sludge of organisms can be used numerous times through multiple cycles of adsorption and desorption,
+            reducing the running costs of the bioreactor and even allowing for the development of a continuous recovery process. A recycle feed for the sludge can be introduced into the continuous wastewater treatment flowsheet.
+        </p>
+
+</div>
+
+<div class="poc-blue">
+    <h1><b>2 <span class="poc-colour">R’s</span> for <span class="poc-colour">RR</span>ecycling!</b></h1>
+    <br><br>
+    <p>
+        The proof of concept helps establish two major factors that greatly define the potential of the lead recovery system. Having already established the ability of our engineered cells to adsorb lead in our design cycle <a href="https://2022.igem.wiki/iit-delhi/engineering">(Engineering success)</a> , we have now
+        come two steps further by demonstrating the ability of the system to desorb the lead for recovery, as well as the reusability of the engineered cells for repeated cycles of adsorption and desorption. Hence, we establish the proof of concept for
+        efficient scale-up of the recovery system by demonstrating the recycling of not just lead but also of the engineered cells which reduces running costs drastically!!
+    </p>
+    <br><br>
+    <div class="red-strip">
+        <h2><i>LEADer recycles lead as well as the engineered E. coli!</i></h2>
+    </div>
+</div>
+
+</article>
+{% endblock %}

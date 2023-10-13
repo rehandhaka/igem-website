@@ -1,0 +1,403 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+<article>
+<div class="cover_img_model">
+  <h1>Modeling</h1>
+</div>
+
+<div class="blueGreyishBlock">
+  <a href="#mathematical_modeling" class="para" style="text-decoration: none; display: block; text-align: center;">•
+    Mathematical
+    Modeling •</a> <br>
+  <a href="#structural_modeling" class="para" style="text-decoration: none;  display: block; text-align: center;">•
+    Structural Modeling •</a>
+</div>
+
+<div class="whiteBlock">
+  <h2 id="mathematical_modeling">Mathematical Modeling</h2>
+  <h3 class="para" style="font-size: 40px">Overview</h3> <br>
+  <p class="para">We wanted to validate the functionality of the genetic circuit used for constructing the biosensor by
+    checking the presence of frequency based oscillations. So we modeled the dynamics of the quorum-sensing oscillator
+    using differentials. Here we model the intracellular concentrations of LuxI (I), AiiA (A), internal AHL (H<sub>i</sub>) and
+    external AHL (H<sub>e</sub>). We implemented and simulated the differential equations of reaction dynamics in python. Note that
+    the delayed differential equations are sourced from existing literature.</p> <br>
+  <h3 class="para" style="font-size: 40px">Methodology</h3> <br>
+  <p class="para">We model our system as a set of 4 differential equations. Following are the differential equations
+    that we modeled in python:</p>
+  <div class="img_equation">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/eq1-2.png" alt="">
+    <p class="subtitle" style="text-align: centre;">Figure 1.1: (a) System of Delayed Differential (b) Hill
+      Function and
+      Delay Definitions</p>
+  </div>
+  <p class="para">Our model has the following assumptions -</p>
+  <ol class="para">
+    <li>In order to transform the partial differentials into ordinary differential equations we ignore the variation of
+      external AHL with respect to position x in equation 4.</li>
+    <li>We assume that the concentration of LuxR is constant throughout the simulation</li>
+    <li>G(α, τ ) describes the delayed generation of the relevant proteins, which relies on the historical concentration
+      of the internal AHL. The intricate procedures (transcription, translation, maturation, etc.) that result in the
+      production of functional proteins are among the delayed responses. </li>
+  </ol>
+  <p class="para">In the Figure 1.1 (b) above, G(α, τ ) represents the delayed production of proteins and is a function
+    of past concentrations of internal AHL. The factor [1 − (d/d<sub>0</sub>)<sup>4</sup>] in equations (1) and (2) of Figure 1.1 (a)
+    signifies that the rate of protein production decreases with increase in cell density. This happens because of low
+    nutrient and high waste concentrations at high cell density. More explanation of each parameter can be found in
+    Table 1.1 below.</p> <br>
+  <h3 class="para" style="font-size: 40px">Parameters</h3> <br>
+  <div class="constants_img">
+  <img src="https://static.igem.wiki/teams/4428/wiki/model/parameters-new.png" alt=""> </div> <br>
+  <h3 class="para" style="font-size: 40px">Results</h3> <br>
+  <p class="para">Running the simulation lead to the plots shown in Figure 1.2 below. We can see the oscillations in
+    concentrations of various elements in the model. These results are a computational proof of concept of a lead-based
+    oscillating biosensor. Our analysis also provides troubleshooting advice for upcoming wet lab teams. More analysis
+    of the results are below.</p>
+  <div class="img_equation">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/graphs-new.png" alt="">
+    <p class="subtitle">Figure 1.2: (a) Overall System Solution (b) Variations in LuxI Concentration</p>
+  </div> <br>
+  <p class="para" style="font-weight: 600;">Analysis:
+  <ol class="para">
+    <li>From the graph (a), we see a range of oscillations for LuxI is around 2500 concentration units, for AiiA is
+      about 700 concentration units, and for internal AHL and external AHL is around 0.28 concentration units.</li>
+    <li>From the graph (b), the change in concentration value from the first peak to subsequent peaks is indicative of
+      the period modulating behavior of the sensor.</li>
+    <li>Further in graph (b): AHL and LuxR form the AHL-LuxR complex which induces sf GFP production. Hence, the
+      oscillations of internal AHL here correspond to the expected visible oscillations in fluorescence.</li> <br>
+  </ol>
+  </p>
+
+  <h3 class="para" style="font-size: 40px">Parameter Sensitivity</h3> <br>
+  <p class="para">We define our own notion of sensitivity to analyse different parameters and suggest troubleshooting
+    solutions for
+    future wet lab teams. We define our sensitivity score below. <br> Let us assume that a parameter P has value p. We
+    call the oscillating curve of internal AHL
+    as Ai<sub>p</sub>(t). Assume that on changing P to p′ we obtain a new curve Ai<sub>p′</sub>(t). Assuming the simulations are run from time
+    t = 0 to t = T we define the RMS Effect on oscillation due to such a change as RMSE(p, p′). Our sensitivity score is
+    the average of RMSE around p on a one percent increase and decrease.
+    <br>
+  <div class="img_formula" style="display: flex;
+  align-items: center;">
+    <!-- <p class="para" style="display: inline; margin-right: 10px;">
+      That is, Sensitivity Score =
+    </p> -->
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/rmse-new.png" alt="" style="display: inline; margin-top: 3%;">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/sensitive-score-new.png" alt=""
+      style="display: inline; margin-top: 3%; margin-left: 5%;"> <br>
+
+  </div>
+  </p>
+
+  <p class="para" style="font-weight: 600;"> Analysis: </p>
+  <p class="para">Results of sensitivity analysis are in Table 1.2 below. We find that
+    oscillations are highly sensitive to τ (constant representing time delay due to protein synthesis). Among the
+    parameters under our control, we notice that d(constant representing the cell density) is very critical for
+    oscillations. Thus, our simulations indicate that while troubleshooting such a circuit in wet lab, one must
+    reconsider the cell-density.
+  </p> <br>
+  <div class="top_sensitive">
+  <img src="https://static.igem.wiki/teams/4428/wiki/model/sens-par-new.png" alt="">
+  </div>
+
+</div>
+
+<div class="blueExperimentDataBlock">
+  <h2>References</h2>
+  <ol class="para">
+    <li>Prindle, A., Samayoa, P., Razinkov, I., Danino, T., Tsimring, L. S., Hasty, J. (2012). A sensing array of
+      radically coupled genetic ‘biopixels’. Nature, 481(7379), 39-44.</li>
+    <li>Hui, C. Y., Guo, Y., Yang, X. Q., Zhang, W., Huang, X. Q. (2018). Surface display of metal binding domain
+      derived from PbrR on <i> Escherichia coli </i> specifically increases lead (II) adsorption. Biotechnology Letters, 40(5),
+      837-845.</li>
+    <li>Rangra, Sabita, et al. "Improved conversion of Dibenzothiophene into sulfone by surface display of
+      Dibenzothiophene monooxygenase (DszC) in recombinant <i> Escherichia coli </i>." Journal of Biotechnology 287 (2018):
+      59-67.</li>
+    <li>Jia, X., Li, Y., Xu, T., Wu, K. (2020). Display of lead-binding proteins on <i> Escherichia coli </i> surface for lead
+      bioremediation. Biotechnology and Bioengineering, 117(12), 3820-3834.</li>
+    <li>Wei, Wei, et al. "Simple whole-cell biodetection and bioremediation of heavy metals based on an engineered
+      lead-specific operon." Environmental science technology 48.6 (2014): 3363-3371.</li>
+  </ol>
+</div>
+
+<div class="whiteBlock">
+  <h2 id="structural_modeling">Structural Modeling</h2>
+  <h3 class="para" style="font-size: 40px">Overview</h3> <br>
+  <p class="para">Our project aims to develop lead recovery systems that address limitations like poor display
+    efficiency, lack of specificity or poor binding affinity. We simulate the recovery system using structural modelling
+    and molecular simulations to test how our proteins fare in these parameters. We analyse various lead-binding
+    proteins through our pipeline and find the best protein, its metal binding region, and the lead-protein complex
+    stability. We first generate the protein structures from amino acid sequences in the existing literature and
+    registered parts. These proteins were then simulated in an environment of water to get their updated structure.
+    Next, we ran molecular dynamics simulations, which provided us the
+    stability parameters like RMSD and RMSF to compare how different proteins bind with the metal ion conformationally. We ran the
+    following proteins through this pipeline - PbrR, PbrR MBD, and PbrR691. This was used to predict the most efficient
+    lead recovery protein. Our pipeline can be extended to other metal ions to create different heavy metal recovery
+    systems. </p> <br>
+  <h3 class="para" style="font-size: 40px">Detailed plan</h3> <br> <br>
+  <div class="img_i_o">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/i-o-new.png" alt="">
+  </div> <br>
+  <p class="para">Our overall pipeline contains three processing steps. We define each element in detail below:</p>
+  <div class="img_input" style="width: 200px;">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/input.png" alt="" style="width: 800px;">
+  </div>
+  <p class="para">
+    <!-- <span style="font-weight: 600;">PbrR:</span> -->
+    For our lead binding protein: PbrR, PbrR_MBD, PbrR691, we took the dimer structure of all the proteins for
+    simulation. For PbrR, we continued our analysis with monomer as well because its lead binding pocket formed if all
+    binding residues are considered from same chain was feasible as compared to PbrR_MBD and PbrR691 where considering
+    all binding residues from the same chain led to a binding pocket inside the protein structure’s helix, which
+    experts suggested as infeasible.
+
+  </p>
+
+  <p class="para">
+    <span style="font-weight: 600;">PbrR:</span>
+    For PbrR, we modelled the amino acid sequence of 145 bp using SWISS-MODEL and UniProt. We took the monomer structure
+    of PbrR from <a href="https://www.uniprot.org/uniprotkb/Q58AJ5/entry"> UniProt.</a>We generated the dimer structure
+    after modelling from SwissProt. The dimer structure is also
+    considered because CdrR, its matching protein after homology modelling, forms a dimer while binding Cd+2 ions.
+    As shown in the figure below, PbrR monomer unit is a single chain structure with 145 amino acid sequence. The PbrR
+    dimer structure we used contains two chains- Chain A and Chain B with 140 amino acids each based on homology
+    modelling.
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/pbrr-m-d.png" alt="">
+  </div>
+  </p>
+
+  <p class="para"><span style="font-weight: 600;">PbrR MBD:</span>
+    PbrR MBD, where MBD is Metal Binding Domain, improves the overall expression on the cell surface and reduces cell
+    pressure for protein production. For modelling the Metal-Binding-Domain(MBD) of PbrR, we used a truncated sequence
+    from the amino acid sequence of PbrR. The truncated sequence was obtained after truncating 49 N-terminal amino acids
+    and 15 C-terminal amino acids of PbrR sequence [3]. We then model the truncated sequence from SWISS-MODEL. From this
+    we get the dimer structure used in the next step of the pipeline. This structure has two chains - Chain A and Chain
+    B with 85 amino acids each, as shown in the figure below.
+  <div class="pbrr_img forty_five">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/pbrr-mbd.png" alt="">
+  </div>
+  </p>
+
+  <p class="para"><span style="font-weight: 600;">PbrR691:</span>
+    This protein has 1000 times more selectivity towards Pb+2 than other structures [4]. We used the X-RAY diffraction
+    confirmed structure of PDB ID - 5GPE for PbrR691. The structure obtained is octameric, where a dimer accounts for
+    the unique interaction with lead. We used the dimeric structure to go ahead in the pipeline. The dimer obtained from
+    <a href="https://www.rcsb.org/structure/5GPE">5GPE</a>
+    PDB had missing residues. They were filled using SWISS-MODEL. This structure has two chains - Chain A and Chain
+    B with 129 amino acids each.
+  <div class="pbrr_img forty_five">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/pbrr-691.png" alt="">
+  </div>
+  </p>
+  <div class="img_input" style="width: 200px;">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/simulation.png" alt="" style="width: 800px;">
+  </div>
+  <p class="para">
+    In the next step, we simulate the protein in a water environment to mimic its surface structure in an aqueous
+    sample. We ran these Molecular Dynamics (MD) simulations on the academic version of Desmond from Schrodinger for 100
+    nanoseconds. Before running these simulations, we ran a minimisation of 100 picoseconds. After the simulations, we
+    download the final frame of the protein structure for the subsequent steps. This ensures all interactions between
+    the protein and water are considered. This mimics the structure of the protein on the cell surface interacting with
+    water in the environment before binding to lead.
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/protein-s1.png" alt="">
+  </div>
+  </p>
+  <div class="img_input" style="width: 200px;">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/docking.png" alt="" style="width: 800px;">
+  </div>
+  <p class="para">
+    Our initial approach was to dock lead ion onto the protein using AutoDock. However, AutoDock doesn’t support metal
+    ion-protein docking. So, we consulted Mr. Dheeraj from SCFBio at IIT Delhi. He suggested adding the lead-ion into
+    the pdb at the coordinates of the lead binding sites of the protein found in existing literature. So, to do that, we
+    found the coordinates of each residues of the binding sites and then found the centre of mass of these sites by
+    taking the average. We add Pb(II) at the averaged coordinates to the pdb files obtained after Simulation1. This
+    makes a complex which we extract for the next stage of pipeline.
+    <br> <br>
+    1. PbrR_Monomer: Lead binding residues are Cys79, Cys114, Cys123 of the same chain.
+    <br>
+    2. PbrR_Dimer: Lead binding residues are Cys79A, Cys114B, Cys123B; <i> B represents chainB </i>
+    <br>
+    3. PbrR MBD: Lead binding residues are Cys34A , Cys69B , Cys78B
+    <br>
+    4. PbrR691: Lead binding residues are Cys78A , Cys113B, Cys122B
+    <br> <br>
+
+    Lead binding residues were found in existing literature. In our dimer structures, two of the closest lead binding
+    residues were from one chain and one binding residue from another, as found in literature. Visualisations of each
+    pocket are attached below.
+
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/protein-s1-l.png" alt="">
+  </div>
+  </p>
+  <div class="img_input" style="width: 200px;">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/simulation2.png" alt="" style="width: 800px;">
+  </div>
+  <p class="para">The previous step does not consider the interaction of water molecules with the lead-protein complex.
+    Since we are going to use the lead recovery system in aqueous samples. We simulate the lead-protein complex in a
+    water environment to account for interactions in aqueous samples. This was a 100 nanosecond MD Simulation after a
+    100 picosecond minimisation. This ensures all interactions between the lead-protein complex and water are
+    considered. The resultant file is the final structure.
+      <br>  
+     <div class="water_pbrr">
+       <img src="https://static.igem.wiki/teams/4428/wiki/model/in-water.png"> <br>
+       <p class="caption">Lead-Protein complex in water environment</p>
+     </div>
+     <br>
+     <div class="video_drylab">
+       <iframe title="IIT-Delhi: Simulation 2 (2022) [English]" width="560" height="315" src="https://video.igem.org/videos/embed/00f14fa5-9787-4ffa-b477-6f988698261c" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
+     </div>
+     
+  </p>
+  <div class="img_input" style="width: 200px;">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/output.png" alt="" style="width: 800px;">
+  </div>
+  <p class="para">The quantitative parameters of the final structure for each lead(II)-protein complex were obtained
+    from Desmond. These are primarily used to judge whether the binding is irreversible. We also compare the RMSD and
+    RMSF values to compare the stability of lead(II)-protein complex. <br> <br>
+    The RMSD curve represents the root mean square deviation of selected atoms over time. It has been interpreted that
+    more fluctuation in RMSD of structure over time represents unstable protein structure. Also, less RMSD deviation
+    from the initial structure (obtained after Simulation1) represents that the current conformation of the protein is
+    more stable to form a lead-protein complex. <br><br>
+    We looked at three curves that were derived after simulations.
+  <ul class="para">
+    <li>RMSD curve of protein chains.</li>
+    <li>RMSD curve of lead binding residues.</li>
+    <li>RMSD curve of lead.</li>
+  </ul> <br>
+  <p class="para">
+    RMSD curves for protein chains after Simulation2 are used to analyse the overall stability of protein complex. We
+    also
+    obtained the RMSD curve for protein structure after Simulation1, and we found that deviation from the initial
+    structure was larger in Simulation1 as compared to deviations obtained after Simulation2. This was due to
+    conformational changes in the protein that happens after solvation of water. <br><br>
+    RMSD curves for lead binding residues after Simulation2 are checked to analyse the stability of the lead binding
+    pocket. A more stable lead binding pocket (less RMSD) implies the lead binding pocket will be rigid, contributing to
+    better binding. <br><br>
+    RMSD curves for lead ions after Simulation2 are checked to analyse the stability of lead ions which are spherical.
+    Less RMSD here implies lead is sitting inside the lead binding pocket and hence more probably attached with protein.
+  </p>
+  </p>
+  <br>
+  <p class="para"><b>1. PbrR Monomer</b></p>
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/rmsd-p.png" alt="">
+  </div> <br> <br>
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/rmsd-l.png" alt="">
+  </div> <br><br>
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/rmsd-l2.png" alt="">
+  </div> <br> <br> <br>
+
+
+  <p class="para"><b>2. PbrR Dimer </b></p>
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/rmsd-p-ii.png" alt="">
+  </div> <br> <br>
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/rmsd-l-ii.png" alt="">
+  </div> <br><br>
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/rmsd-l2-ii.png" alt="">
+  </div> <br> <br> <br>
+
+  <p class="para"><b>3.
+      PbrR_MBD: </b></p>
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/rmsd-p-iii.png" alt="">
+  </div> <br> <br>
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/rmsd-l-iii.png" alt="">
+  </div> <br><br>
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/rmsd-l2-iii.png" alt="">
+  </div> <br> <br> <br>
+
+  <p class="para"><b>4. PbrR691: </b></p>
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/rmsd-p-iv-new.png" alt="">
+  </div> <br> <br>
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/rmsd-l-iv.png" alt="">
+  </div> <br><br>
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/model/rmsd-l2-iv.png" alt="">
+  </div> <br> <br> <br>
+
+
+  <h3 class="para" style="font-size: 40px">Analysis</h3>
+  <p class="para">RMSD deviation values analysed are calculated taking structure obtained after SImulation1 as reference structure.
+We analysed that RMSD deviation values of overall Lead Binding Pockets(lead binding residues) of order 2 Å with fluctuations less than 1 Å were comparatively lower than RMSD deviation values of the overall structure of each protein which implies that lead binding pocket is comparatively stable than overall structure. The RMSD deviation values of lead are significantly lower, around 0.15 Å, than protein residues. Hence signifying that lead is stable at its position and not leaving the lead binding pocket.</p>
+  <div class="pbrr_img">
+    <img src="https://static.igem.wiki/teams/4428/wiki/awards/rmsd-table.png" alt="">
+  </div>
+  <p class="para">On analysing the RMSD values of protein, we found that RMSD values after reaching a certain time fluctuate within 2Å (fluctuations after saturation), hence signifying that protein becomes stable over time after binding with lead.
+    <br> More RMSD deviation value implies initial conformation after simulation1 is less likely conformation to bind lead and will change once it interacts with lead. So, based on RMSD saturation values range, it is implied that lead binding affinity of initial conformation of protein structure is in below mentioned order : 
+<br>
+<b>PbrR_MBD_Dimer > PbrR691_Dimer > PbrR_Dimer > PbrR_Monomer</b>
+<br>
+
+
+  </p>
+  <br><br>
+  <h3 class="para" style="font-size: 40px">Discussion</h3>
+  <p class="para">We used dimer structures during our pipeline for structural modelling since lead binding pockets were
+    found to be better in the case of dimeric structures. In the single chain structure of PbrR_MBD, PbrR691, by
+    considering all lead binding residues on single chain results in a centre of mass for lead binding residues inside
+    the helix of protein which is described as infeasible by our advisors.So, we had gone ahead with dimer structures of PbrR691, PbrR_MBD, PbrR in next steps of pipeline. We only modelled the PbrR monomer structure for next steps in pipeline
+    because the centre of mass of its lead binding residues was found at an acceptable(not at helix) site. <br></p>
+  <p class="para">We initially thought that this particular modelling with dimer structures is not able to exactly mimic
+    our lead recovery system since we are expressing protein on cell surface using anchor protein which will keep
+    proteins
+    in monomeric form but on analysing more on the flow of generation of our protein from engineered plasmids after transcription and transalation, it is possible that
+    these
+    proteins can dimerise on the basis of their dimer forming affinity in the cytoplasm itself since they reach their first and are free there. After that, anchor protein can
+    express these proteins on surface in dimer form to bind lead effectively.
+  </p>
+  <h3 class="para" style="font-size: 40px">Miscellaneous</h3>
+  <p class="para"><b>1. Mistake in <a href="http://parts.igem.org/Part:BBa_K1701001">Part:BBa_K1701001</a>
+    </b> <br>
+    While analysing the existing literature during structural modelling of PbrR protein. We went through <a
+      href="http://parts.igem.org/Part:BBa_K1701001">Part:BBa_K1701001</a>
+    and found the structure of PbrR being cited from <a href="https://www.rcsb.org/structure/2mtq">PDB ID: 2MTQ</a> .
+    But according to the information we
+    had, PbrR protein is a 145 amino acid sequence while 2MTQ PDB ID protein is a 73 amino acid sequence. While going
+    through DNA sequence of <a href="http://parts.igem.org/Part:BBa_K1701001">Part:BBa_K1701001</a> and translating it,
+    we found that it will form a 145 amino acid sequence
+    same as PbrR. So while the part sequence is of PbrR, i.e. around 145 amino acids, the structure has 73 amino acids.
+    Hence, we conclude that it is a wrong structure. We are providing the link to the predicted structure at the end,
+    based on <a href="https://www.uniprot.org/uniprotkb/Q58AJ5/entry">UniProt</a> .
+  </p>
+
+  <p class="para"><b>2. Mistake in <a href="http://parts.igem.org/Part:BBa_K1958007"> Part:BBa_K1958007</a> </a>
+    </b> <br>
+    While finding the lead binding residues of PbrR, we went through <a
+      href="http://parts.igem.org/Part:BBa_K1958007">Part:BBa_K1958007</a> and found that Cys78, Cys113 and
+    Cys122 lead binding residues of PbrR691 are given as lead binding residues of PbrR [4]. But on translating the DNA
+    sequence attached with the part, we found that the translated amino acid sequence to be the sequence of PbrR which
+    has no Cys residues at positions 78, 113, and 122. The Cys residues of PbrR were at positions 79, 114 and 123 which
+    are lead-binding residues of PbrR as mentioned in literature.
+  </p>
+
+</div>
+
+
+<div class="blueExperimentDataBlock">
+  <h2>References</h2>
+  <ol class="para">
+    <li><a href="https://www.uniprot.org/" class="para">https://www.uniprot.org/ </a></li>
+    <li><a href="https://pubs.acs.org/doi/10.1021/acs.inorgchem.9b03059"
+        class="para">https://pubs.acs.org/doi/10.1021/acs.inorgchem.9b03059</a>
+    </li>
+    <li><a href="https://doi.org/10.1007/s10529-018-2533-4"
+        style="color: white;">https://doi.org/10.1007/s10529-018-2533-4</a></li>
+    <li><a href="https://doi.org/10.1515%2F9783110434330-010" style="color: white;">10.1515/9783110434330-010 </a></li>
+    <li><a href="https://drive.google.com/drive/folders/1daJQQgPVcY-tysKsfcv-GmQfalZX_dey?usp=sharing"
+        style="color: white;">Link to
+        supplementary resources!</a></li>
+  </ol>
+</div>
+</article>
+{% endblock %}

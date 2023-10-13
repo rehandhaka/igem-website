@@ -1,0 +1,121 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #2F4454
+;">
+  <div class="container">
+
+    <!---- TEAM NAME ---->
+    <a class="navbar-brand" href="{{ url_for('index') }}"><img src="https://static.igem.wiki/teams/4428/wiki/awards/logo-igem.png" alt="iGEM IIT-Delhi" width="70" style="border-radius: 50%;"></a>
+
+    <!---- SMALL SCREEN MENU ICON ---->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> 
+
+    <div style="justify-content: space-evenly;" class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto left-aligned" style="font-size: 22px">
+
+        <!---- HOME ---->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('index') }}" style="color: #EBA98F;">Home</a>
+        </li> -->
+
+        <!---- Project ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #EBA98F;">
+            Project
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #2F4454">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='description') }}">Description</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='design') }}">Design</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='implementation') }}">Implementation</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='proof-of-concept') }}">Proof of Concept</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='partnership') }}">Partnership</a></li>
+          </ul>
+        </li>
+
+        <!---- Wet lab ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #EBA98F;">
+            Wet Lab
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #2F4454">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='parts') }}">Parts</a></li>
+            <!-- <li><a class="dropdown-item" href="{{ url_for('pages', page='part-collection') }}">Parts Collection</a></li> -->
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='results') }}">Results</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='improve') }}">Improvement</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook') }}">Notebook</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='experiments') }}">Experiments</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='safety') }}">Safety</a></li>
+          </ul>
+        </li>
+
+<!-- Model -->
+<li class="nav-item">
+          <a class="nav-link" href="{{ url_for('pages', page='model') }}" style="color: #EBA98F;">Model</a>
+        </li>
+
+
+        <!---- Human Practices ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #EBA98F;">
+            Human Practices
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #2F4454">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='human-practices') }}">Human Practices</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='communication') }}">Communication</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='guide-to-human-practices') }}">Guide to Human Practices</a></li>
+          </ul>
+        </li>
+
+        <!---- TEAM ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #EBA98F;">
+            Team
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #2F4454">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='team') }}">Members</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='collaborations') }}">Collaboration</a></li>
+          </ul>
+        </li>
+
+
+        <!---- Awards ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #EBA98F;">
+            Awards
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #2F4454">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='education') }}">Education</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='inclusivity') }}">Inclusivity and Diversity</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='sustainable') }}">Sustainability</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a></li>
+          </ul>
+        </li>
+
+        <!---- HUMAN PRACTICES ---->
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #EBA98F;">
+            Human Practices
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #2F4454">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='human-practices') }}">Human Practices</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='human-practices') }}">Integrated Human Practices</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='collaborations') }}">Collaborations</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='education') }}">Education</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='inclusivity') }}">Inclusivity and Diversity</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='human-practices') }}">Guide to Human Practices</a></li>
+          </ul>
+        </li> -->
+
+        <!---- AWARDS ---->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('pages', page='hardware') }}" style="color: #EBA98F;">Awards</a>
+        </li> -->
+
+
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,63 @@
+{% extends "layout.html" %} {% block page_content %}
+<article>
+<div class="section-blue">
+    <h1>Improvement</h1>
+</div>
+
+<div class="description">
+    <p>
+        We propose <a href="http://parts.igem.org/Part:BBa_K4428001">BBa_K4428001</a> as an improvement of the part <a href="http://parts.igem.org/Part:BBa_K1701001">BBa_K1701001</a>.
+    </p>
+    <br>
+    <p>
+        Through the course of our project, we have studied proteins that can improve the efficiency of our lead recovery system by improving upon various parameters like the degree of cell-surface display of the protein, efficiency of lead binding with the protein,
+        reduced metabolic burden on the cell and improved specificity for our heavy metal of consideration, lead. To achieve these improvements, we assessed multiple candidate lead-binding proteins like PbrR, the metal binding domain (MBD) of PbrR and
+        PbrR691, a recombinant version of PbrR.
+    </p>
+    <br>
+    <p>
+        Our literature review suggests that the PbrR significantly improves the degree of cell-surface display of the protein almost two-fold. We attribute this improvement to the small size of the protein which also reduces the metabolic burden on the cell.
+        The same surface area is then used to express a much smaller protein which also improves the amount of protein expressed on the surface. We also explored PbrR691 as it is known to have 1000 times more specificity for lead than other heavy metals
+        compared to PbrR.
+    </p>
+    <br>
+    <p>
+        Our in silico analysis suggests that PbrR MBD is the best candidate of them all to bind with lead. While doing the structural analysis on the basis of conformational stability of structures simulated in a water environment, we found that PbrR MBD after
+        binding with lead deviates lesser with respect to its unbounded structure compared to all other candidate proteins. Thus, we were able to conclude that the unbound structure of PbrR MBD in a water environment is the most conformationally stable
+        for binding lead. This stability was implied on the basis of the deviation of saturated RMSD values from the initial structure after simulation. A detailed analysis is performed on the <a href="{{ url_for('pages', page='model') }}">Model</a>        page.
+    </p>
+    <br>
+</div>
+
+<div class="desc-references blue-section mud">
+    <p>
+        As both our literature review and in silico analysis strongly suggest PbrR MBD as a better protein for lead recovery than PbrR, we proceeded with an experimental analysis of the two. We cloned the two proteins in <i> E. coli </i> downstream of an anchor protein
+        to ensure cell-surface expression of the two. In the limited time we had, we have been able to preliminarily demonstrate that PbrR MBD is an improvement over PbrR.
+    </p>
+    <br>
+    <p>
+        When subject to the same 400 ppb concentration of lead, PbrR MBD is able to remove as much amount of lead from the system as PbrR. This clearly suggests that even this smaller protein is sufficient for lead adsorption at 0.4 mg/l concentration of lead
+        which is the concentration of lead in industrial effluents. Our results suggest that this is nowhere near the maximum capacity of adsorption of the proteins which would actually be much more than what is currently tested in the limited time frame.
+        However, this in itself suggests that even this smaller protein can work as well as PbrR in these concentrations and thus, reduces the metabolic burden of the cell.
+    </p>
+</div>
+<br>
+
+<div class="description">
+    <p>
+        Further, we observe that a greater amount of lead is successfully desorbed from the cells expressing PbrR-MBD on their surface than PbrR. This suggests that PbrR-MBD may have an even greater ability to recover lead than PbrR. This observation holds great
+        significance when thinking about the recycling of lead instead of just its removal. A detailed analysis of both experimental conclusions can be viewed on the <a href="{{ url_for('pages', page='results') }}">Results</a> page.
+    </p>
+    <br>
+    <p>
+        Further experiments being performed by our team shall characterise the maximum capacity of adsorption of the two proteins and their exact degree of cell-surface expression. However, these preliminary experiments, our in silico analysis and our literature
+        review clearly suggest that PbrR-MBD is superior to PbrR for the recovery of lead.
+    </p>
+</div>
+
+
+<br>
+</div>
+
+</article>
+{% endblock %}
